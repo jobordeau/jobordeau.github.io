@@ -1,91 +1,391 @@
-<!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Porfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jovann Bordeau – Portfolio IA & Big Data</title>
+  <meta name="description" content="Portfolio de Jovann Bordeau – Ingénierie de l'IA & Big Data. Projets, parcours, compétences, contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0d12;          /* dark base */
+      --panel: #10141b;
+      --text: #dbe0ea;
+      --muted: #a7b0c0;
+      --brand:#7c5cff;        /* accent */
+      --brand-2:#00e0a4;      /* accent 2 */
+      --line:#1b2230;
+      --card:#0f131a;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius-xl: 18px;
+      --radius-lg: 14px;
+      --radius: 12px;
+      --radius-sm: 10px;
+      --maxw: 1100px;
+    }
+    .light{
+      --bg: #f7f9fc;
+      --panel:#fff;
+      --card:#fff;
+      --text:#0e1624;
+      --muted:#4a5568;
+      --line:#e8edf4;
+      --shadow: 0 12px 28px rgba(16, 24, 40, .08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--text); background: radial-gradient(1000px 600px at 80% -10%, rgba(124,92,255,.15), transparent 60%), radial-gradient(800px 500px at -10% 10%, rgba(0,224,164,.10), transparent 55%), var(--bg); letter-spacing:.2px}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 85%, transparent);backdrop-filter: blur(10px); border-bottom:1px solid var(--line)}
+    .nav .row{display:flex;align-items:center;gap:14px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .brand .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:var(--shadow)}
+    .navlinks{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+    .navlinks a{padding:10px 14px;border-radius:10px;color:var(--muted);font-weight:600}
+    .navlinks a.active,.navlinks a:hover{color:var(--text);background:var(--panel)}
+    .toggle{margin-left:8px;border:1px solid var(--line);background:var(--panel);padding:8px 12px;border-radius:10px;cursor:pointer;color:var(--muted);font-weight:600}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#work" class="icon solid fa-folder"><span>Projets</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-					</nav>
+    /* Hero */
+    .hero{padding:64px 0 32px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg, color-mix(in srgb, var(--brand) 20%, transparent), color-mix(in srgb, var(--brand-2) 20%, transparent)); border:1px solid var(--line); padding:6px 10px; border-radius:999px; color:var(--muted); font-weight:600}
+    .title{font-size: clamp(32px, 4.6vw, 56px); line-height:1.05; margin:10px 0 14px; font-weight:800}
+    .subtitle{font-size: clamp(16px, 2vw, 20px); color:var(--muted)}
+    .cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b0d12;border:0}
+    .statbar{display:flex;gap:16px;margin-top:22px;color:var(--muted)}
+    .statbar .pill{background:var(--panel);border:1px solid var(--line);padding:10px 12px;border-radius:999px}
+    .hero-card{background:linear-gradient(180deg, color-mix(in srgb, var(--brand) 8%, var(--card)), var(--card)); border:1px solid var(--line); border-radius:var(--radius-xl); box-shadow:var(--shadow); padding:18px}
+    .hero-card .code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:13.5px; line-height:1.55; color:var(--muted)}
 
-				<!-- Main -->
-					<div id="main">
+    /* Section */
+    section{padding:28px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin:4px 0 16px}
+    .section-head h2{font-size:28px;margin:0}
+    .section-desc{color:var(--muted)}
 
-						<!-- Work -->
-							<article id="work" class="panel">
-								<header>
-									<h2>Projets</h2>
-								</header>
-								<p>
-									Voici quelques-uns de mes projets que j’ai réalisés pendant mes années en DUT Informatique. Cliquez sur leur image pour être redirigé vers leur dépôt Github.
-								</p>
-								<section>
-									<div class="row">
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://github.com/jobordeau/bovie_track" class="image fit"><img src="images/bt.png" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://github.com/jobordeau/projet_rv_golf" class="image fit"><img src="images/vr.png" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://github.com/jobordeau/Projet-IA" class="image fit"><img src="images/ia.png" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="https://github.com/jobordeau/todo-list-php" class="image fit"><img src="images/web.png" alt=""></a>
-										</div>
-									</div>
-								</section>
-							</article>
+    /* Experience timeline */
+    .timeline{display:grid;grid-template-columns:28px 1fr;gap:18px}
+    .tl-line{background:linear-gradient(#00e0a4, #7c5cff);border-radius:999px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:16px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 4px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .chip{padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel);font-weight:600;font-size:12px}
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
-								<header>
-									<h2>Contactez-moi</h2>
-								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<p>Email: jovann.bordeau@gmail.com</p>
-											</div>
-											<div class="col-6 col-12-medium">
-												<p>Téléphone: 06 51 21 83 57</p>
-											</div>
-										</div>
-									</div>
-								</form>
-							</article>
+    /* Projects */
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 2px}
+    .filter{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);cursor:pointer;color:var(--muted);font-weight:700}
+    .filter.active{background:linear-gradient(135deg,var(--brand) 35%,var(--brand-2));color:#0b0d12;border:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
+    .project .thumb{height:160px;background:linear-gradient(135deg, color-mix(in srgb, var(--brand) 30%, #0000), color-mix(in srgb, var(--brand-2) 20%, #0000)); display:grid; place-items:center; font-weight:800; letter-spacing:.5px}
+    .project .body{padding:14px}
+    .project h3{margin:0 0 6px; font-size:18px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .project .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+    .tag{font-size:11px;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:4px 8px;border-radius:999px}
+    .project a.stretched{position:absolute;inset:0}
 
-					</div>
-					<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>Jovann Bordeau</li><li>DUT Informatique</li>
-						</ul>
-					</div>
-			</div>
+    /* Skills */
+    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .skill{padding:14px;border:1px solid var(--line);background:var(--panel);border-radius:14px}
+    .meter{height:8px;background:color-mix(in srgb, var(--panel) 70%, transparent);border-radius:999px;overflow:hidden;margin-top:8px}
+    .meter > b{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact .card a.btn{width:fit-content}
 
-	</body>
+    /* Footer */
+    footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted)}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+    .hide{display:none !important}
+
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .skills{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width: 560px){
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container row">
+      <div class="brand"><span class="logo">JB</span> Jovann Bordeau</div>
+      <div class="navlinks" id="navlinks">
+        <a href="#about">À propos</a>
+        <a href="#experience">Parcours</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+        <button class="toggle" id="themeToggle" aria-label="Basculer le thème">☾ Thème</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / About -->
+  <header class="hero" id="about">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Ingénierie de l'IA & Big Data · Paris</span>
+        <h1 class="title">Construire des systèmes <span style="background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">intelligents</span> utiles et fiables.</h1>
+        <p class="subtitle">Ingénieur IA & Data, spécialisé en MLOps, NLP et pipelines temps réel. <br/> DUT Informatique → ESGI (Big Data & IA). Je conçois des modèles, j'industrialise, et je livre en production.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">Découvrir mes projets</a>
+          <a class="btn" href="#contact">Me contacter</a>
+          <a class="btn" href="#cv" onclick="alert('Ajoute ton fichier CV.pdf à la racine et remplace le lien !'); return false;">Télécharger mon CV ↘</a>
+        </div>
+        <div class="statbar">
+          <span class="pill">5+ ans de projets</span>
+          <span class="pill">IA · Big Data · Cloud</span>
+          <span class="pill">Python · PyTorch · Kafka</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <strong>Extrait de code</strong>
+        <pre class="code"><code>// Exemple – Pipeline d'inférence (pseudo-code)
+app.post("/predict", upload.json, async (req,res) =&gt; {
+  const features = await preprocess(req.body);
+  const y = await model.predict(features);
+  const log = await audit.write({ t: Date.now(), features, y });
+  return res.json({ ok: true, prediction: y });
+});
+        </code></pre>
+        <div class="chips">
+          <span class="chip">MLOps</span>
+          <span class="chip">CI/CD</span>
+          <span class="chip">Observabilité</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head">
+        <h2>Parcours</h2>
+        <p class="section-desc">Études et spécialisation</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>ESGI – Ingénierie de l'IA & Big Data</h3>
+          <p class="muted">2022–2025 · Paris</p>
+          <p>Spécialisation IA/Big Data : pipelines temps réel (Kafka/Flink), NLP, deep learning, MLOps (Docker, CI/CD, Cloud).</p>
+          <div class="chips">
+            <span class="chip">IA</span>
+            <span class="chip">Big Data</span>
+            <span class="chip">MLOps</span>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>DUT Informatique</h3>
+          <p class="muted">2020–2022</p>
+          <p>Algorithmique, POO, web, bases de données. Premiers projets concrets et portfolio initial.</p>
+          <div class="chips">
+            <span class="chip">Algo</span>
+            <span class="chip">POO</span>
+            <span class="chip">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <h2>Projets</h2>
+        <p class="section-desc">Sélection de réalisations académiques et personnelles</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="all">Tout</button>
+        <button class="filter" data-filter="ia">IA</button>
+        <button class="filter" data-filter="bigdata">Big Data</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="vr">VR</button>
+      </div>
+      <div class="grid" id="grid">
+        <!-- Project cards -->
+        <article class="project" data-tags="web">
+          <a class="stretched" href="https://github.com/jobordeau/todo-list-php" target="_blank" rel="noopener"></a>
+          <div class="thumb">WEB</div>
+          <div class="body">
+            <h3>Todo List (PHP)</h3>
+            <p>App web CRUD en PHP/MySQL avec design responsive.</p>
+            <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span></div>
+          </div>
+        </article>
+        <article class="project" data-tags="vr">
+          <a class="stretched" href="https://github.com/jobordeau/projet_rv_golf" target="_blank" rel="noopener"></a>
+          <div class="thumb">VR</div>
+          <div class="body">
+            <h3>Projet VR Golf</h3>
+            <p>Expérience VR interactive – physique de trajectoire réaliste.</p>
+            <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">VR</span></div>
+          </div>
+        </article>
+        <article class="project" data-tags="ia">
+          <a class="stretched" href="https://github.com/jobordeau/Projet-IA" target="_blank" rel="noopener"></a>
+          <div class="thumb">IA</div>
+          <div class="body">
+            <h3>Projet IA</h3>
+            <p>Classification supervisée, validation croisée, métriques.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span></div>
+          </div>
+        </article>
+        <article class="project" data-tags="bigdata">
+          <a class="stretched" href="#" target="_blank" rel="noopener"></a>
+          <div class="thumb">STREAM</div>
+          <div class="body">
+            <h3>Pipeline temps réel Crypto Sentiment</h3>
+            <p>Ingestion Reddit→Kafka→Flink→Postgres, NLP, dashboard.</p>
+            <div class="tags"><span class="tag">Kafka</span><span class="tag">Flink</span><span class="tag">NLP</span></div>
+          </div>
+        </article>
+        <article class="project" data-tags="ia bigdata">
+          <a class="stretched" href="#" target="_blank" rel="noopener"></a>
+          <div class="thumb">MLOps</div>
+          <div class="body">
+            <h3>API d'inférence & Monitoring</h3>
+            <p>Serving modèle, CI/CD, métriques, traçabilité.</p>
+            <div class="tags"><span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">Prometheus</span></div>
+          </div>
+        </article>
+        <article class="project" data-tags="web ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener"></a>
+          <div class="thumb">NLP</div>
+          <div class="body">
+            <h3>Chatbot ESGI</h3>
+            <p>Bot QA programmatique, indexation, recherche sémantique.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">RAG</span><span class="tag">Vector DB</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <h2>Compétences</h2>
+        <p class="section-desc">Stack technique principale</p>
+      </div>
+      <div class="skills">
+        <div class="skill"><strong>Python</strong><div class="meter"><b style="width:92%"></b></div><p class="muted">FastAPI, PyTorch, scikit-learn</p></div>
+        <div class="skill"><strong>Data & Streaming</strong><div class="meter"><b style="width:88%"></b></div><p class="muted">Kafka, Flink, Postgres</p></div>
+        <div class="skill"><strong>Cloud & DevOps</strong><div class="meter"><b style="width:80%"></b></div><p class="muted">Docker, CI/CD, Linux</p></div>
+        <div class="skill"><strong>NLP</strong><div class="meter"><b style="width:84%"></b></div><p class="muted">RAG, embeddings, LLM</p></div>
+        <div class="skill"><strong>Web</strong><div class="meter"><b style="width:76%"></b></div><p class="muted">HTML/CSS/JS, React (base)</p></div>
+        <div class="skill"><strong>BDD</strong><div class="meter"><b style="width:78%"></b></div><p class="muted">SQL, ORM, optimisation</p></div>
+        <div class="skill"><strong>Vision</strong><div class="meter"><b style="width:62%"></b></div><p class="muted">OpenCV, Data augm.</p></div>
+        <div class="skill"><strong>Anglais</strong><div class="meter"><b style="width:72%"></b></div><p class="muted">Tech writing, meetings</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="section-desc">Travaillons ensemble</p>
+      </div>
+      <div class="contact">
+        <div class="card">
+          <h3>Coordonnées</h3>
+          <p class="muted">Disponible pour alternance, CDI junior ou missions freelances.</p>
+          <div class="chips">
+            <a class="chip" href="mailto:jovann.bordeau@gmail.com">📧 jovann.bordeau@gmail.com</a>
+            <button class="chip" id="copyMail" aria-label="Copier l'email">📋 Copier l'email</button>
+            <a class="chip" href="https://github.com/jobordeau" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a class="chip" href="#" onclick="alert('Ajoute ton URL LinkedIn !');return false;">🔗 LinkedIn</a>
+          </div>
+          <a class="btn" href="#about">En savoir plus sur moi</a>
+        </div>
+        <div class="card">
+          <h3>Me laisser un message</h3>
+          <p class="muted">Ce formulaire ouvre votre client e‑mail.</p>
+          <a class="btn primary" href="mailto:jovann.bordeau@gmail.com?subject=Contact%20Portfolio&body=Bonjour%20Jovann,%20">Écrire un e‑mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <span>© <span id="year"></span> Jovann Bordeau · IA & Big Data</span>
+      <span class="muted">Construit avec HTML/CSS/JS – hébergé sur GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle + persist
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light'){ document.body.classList.add('light'); }
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    // Simple filter
+    const filters = document.querySelector('#filters');
+    const cards = [...document.querySelectorAll('.project')];
+    filters.addEventListener('click', (e)=>{
+      const btn = e.target.closest('.filter');
+      if(!btn) return;
+      document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c=>{
+        const tags = c.dataset.tags.split(' ');
+        c.classList.toggle('hide', !(f==='all' || tags.includes(f)));
+      });
+    });
+
+    // Scroll spy (active link)
+    const sections = ['about','experience','projects','skills','contact'].map(id=>document.getElementById(id));
+    const navlinks = [...document.querySelectorAll('.navlinks a[href^="#"]')];
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting){
+          const id = '#' + ent.target.id;
+          navlinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')===id));
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px', threshold: 0});
+    sections.forEach(s=>obs.observe(s));
+
+    // Copy email
+    document.getElementById('copyMail').addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText('jovann.bordeau@gmail.com');
+        const b = document.getElementById('copyMail');
+        b.textContent = '✅ Copié !'; setTimeout(()=> b.textContent='📋 Copier l\'email', 1600);
+      }catch{ alert('Impossible de copier'); }
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
