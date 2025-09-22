@@ -59,12 +59,10 @@
     .avatar::after{content:"";position:absolute;inset:10px;border-radius:999px;background:radial-gradient(60% 60% at 30% 30%, rgba(255,255,255,.09), transparent 60%)}
     .avatar img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:999px;display:block;filter:saturate(1.05) contrast(1.05)}
     .avatar-caption{display:none}
-    .avatar-wrap{display:grid;place-items:center;align-self:center}
-    .avatar{position:relative;width:min(280px,60vw);aspect-ratio:1/1;border-radius:999px;padding:6px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
-    .avatar::after{content:"";position:absolute;inset:10px;border-radius:999px;background:radial-gradient(60% 60% at 30% 30%, rgba(255,255,255,.09), transparent 60%)}
-    .avatar img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:999px;display:block;filter:saturate(1.05) contrast(1.05)}
-    .avatar-caption{margin-top:10px;text-align:center;color:var(--muted);font-weight:600}
+
     .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg, color-mix(in srgb, var(--brand) 20%, transparent), color-mix(in srgb, var(--brand-2) 20%, transparent)); border:1px solid var(--line); padding:6px 10px; border-radius:999px; color:var(--muted); font-weight:800}
+    .avatar-badge{margin-top:12px;text-align:center} /* <-- centre le badge sous la photo */
+
     .title{font-size: clamp(32px, 4.6vw, 56px); line-height:1.05; margin:10px 0 14px; font-weight:800}
     .subtitle{font-size: clamp(16px, 2vw, 20px); color:var(--muted)}
     .cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
@@ -143,7 +141,7 @@
         <a href="#projects">Projets</a>
         <a href="#skills">Compétences</a>
         <a href="#contact">Contact</a>
-        <button class="toggle" id="themeToggle" aria-label="Basculer le thème">☾ Thème</button>
+        <button class="toggle" id="themeToggle" aria-label="Basculer le thème">☾ Thème</button>
       </div>
     </div>
   </nav>
@@ -151,8 +149,9 @@
   <!-- Hero / About -->
   <header class="hero" id="about">
     <div class="container hero-grid">
+      <!-- Colonne gauche -->
       <div>
-        <span class="badge">Expert en ingénierie de l'IA & Big Data</span>
+        <!-- (badge retiré d'ici) -->
         <h1 class="title"><span style="background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">Construire</span> des systèmes qui <span style="background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">transforment</span> la donnée brute en valeur <span style="background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">mesurable.</span></h1>
         <p class="subtitle">24 ans — Bac+5 — Île-de-France</p>
         <div class="cta">
@@ -166,15 +165,19 @@
         </div>
         <div class="cta" style="margin-top:18px"><a class="btn primary" href="#contact">Me contacter</a></div>
       </div>
+
+      <!-- Colonne droite : photo + badge dessous -->
       <div class="avatar-wrap">
         <div class="avatar">
           <img src="images/profile.jpg" alt="Photo de profil de Jovann Bordeau" loading="eager"/>
+        </div>
+        <div class="avatar-badge">
+          <span class="badge">Expert en ingénierie de l'IA & Big Data</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Experience -->
   <!-- Projects (top) -->
   <section id="projects">
     <div class="container">
@@ -197,7 +200,7 @@
           <div class="thumb">TRADING · IA</div>
           <div class="body">
             <h3>Plateforme d'aide à la décision pour traders</h3>
-            <p>Web-app (ASP.NET Core + backend Python) : prédiction court terme, chandeliers, analyse de sentiment multi‑sources. Infra GCP industrialisée.</p>
+            <p>Web-app (ASP.NET Core + backend Python) : prédiction court terme, chandeliers, analyse de sentiment multi-sources. Infra GCP industrialisée.</p>
             <div class="tags"><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">Airflow</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span></div>
           </div>
         </article>
@@ -307,9 +310,6 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  
-
   <!-- Skills -->
   <section id="skills">
     <div class="container">
@@ -372,7 +372,7 @@
       <div class="contact">
         <div class="card">
           <h3>Coordonnées</h3>
-          <p class="muted">À l'écoute d'un poste de <b>Data Engineer</b>. Basé en Seine‑et‑Marne (77).</p>
+          <p class="muted">À l'écoute d'un poste de <b>Data Engineer</b>. Basé en Seine-et-Marne (77).</p>
           <div class="chips">
             <a class="chip" href="mailto:jbordeau2@myges.fr">📧 jbordeau2@myges.fr</a>
             <button class="chip" id="copyMail" aria-label="Copier l'email">📋 Copier l'email</button>
@@ -387,16 +387,16 @@
         </div>
         <div class="card">
           <h3>Me laisser un message</h3>
-          <p class="muted">Ce bouton ouvre votre client e‑mail.</p>
-          <a class="btn primary" href="mailto:jbordeau2@myges.fr?subject=Contact%20Portfolio&body=Bonjour%20Jovann,%20">Écrire un e‑mail</a>
+          <p class="muted">Ce bouton ouvre votre client e-mail.</p>
+          <a class="btn primary" href="mailto:jbordeau2@myges.fr?subject=Contact%20Portfolio&body=Bonjour%20Jovann,%20">Écrire un e-mail</a>
         </div>
       </div>
           <a class="btn" href="#about">En savoir plus sur moi</a>
         </div>
         <div class="card">
           <h3>Me laisser un message</h3>
-          <p class="muted">Ce formulaire ouvre votre client e‑mail.</p>
-          <a class="btn primary" href="mailto:jovann.bordeau@gmail.com?subject=Contact%20Portfolio&body=Bonjour%20Jovann,%20">Écrire un e‑mail</a>
+          <p class="muted">Ce formulaire ouvre votre client e-mail.</p>
+          <a class="btn primary" href="mailto:jovann.bordeau@gmail.com?subject=Contact%20Portfolio&body=Bonjour%20Jovann,%20">Écrire un e-mail</a>
         </div>
       </div>
     </div>
@@ -437,6 +437,7 @@
 
     // Scroll spy (active link)
     const sections = ['about','experience-pro','education','projects','skills','contact'].map(id=>document.getElementById(id));
+    const navlinks = [...document.querySelectorAll('.navlinks a[href^="#"]')];
     const obs = new IntersectionObserver((entries)=>{
       entries.forEach(ent=>{
         if(ent.isIntersecting){
@@ -448,26 +449,19 @@
     sections.forEach(s=>obs.observe(s));
 
     // Copy email
-    document.getElementById('copyMail').addEventListener('click', async ()=>{
-      try{ await navigator.clipboard.writeText('jbordeau2@myges.fr');
-        const b = document.getElementById('copyMail');
-        b.textContent = '✅ Copié !'; setTimeout(()=> b.textContent='📋 Copier l\'email', 1600);
-      }catch{ alert('Impossible de copier'); }
-    });
+    const copyBtn = document.getElementById('copyMail');
+    if(copyBtn){
+      copyBtn.addEventListener('click', async ()=>{
+        try{
+          await navigator.clipboard.writeText('jbordeau2@myges.fr');
+          copyBtn.textContent = '✅ Copié !';
+          setTimeout(()=> copyBtn.textContent='📋 Copier l\'email', 1600);
+        }catch{ alert('Impossible de copier'); }
+      });
+    }
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
