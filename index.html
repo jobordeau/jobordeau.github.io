@@ -128,7 +128,8 @@
       <div class="brand"><span class="logo">JB</span> Jovann Bordeau</div>
       <div class="navlinks" id="navlinks">
         <a href="#about">À propos</a>
-        <a href="#experience">Parcours</a>
+        <a href="#experience-pro">Expérience</a>
+        <a href="#education">Études</a>
         <a href="#projects">Projets</a>
         <a href="#skills">Compétences</a>
         <a href="#contact">Contact</a>
@@ -142,113 +143,81 @@
     <div class="container hero-grid">
       <div>
         <span class="badge">Expert en ingénierie de l'IA & Big Data · Seine-et-Marne (77)</span>
-        <h1 class="title">Construire des systèmes <span style="background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">intelligents</span> utiles et fiables.</h1>
-        <p class="subtitle">Expert en ingénierie de l'intelligence artificielle (24 ans). DUT Informatique → ESGI (Bachelor + Mastère IA & Big Data). Je construis des pipelines temps réel, des APIs d'inférence robustes et des systèmes IA industrialisés (MLOps / Cloud / Data Engineering). À l'écoute d'un poste de <b>Data Engineer</b>.</p>
+        <h1 class="title">Je conçois et industrialise des plateformes <span style="background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">Data & IA</span> à impact.</h1>
+        <p class="subtitle">24 ans — DUT Informatique → ESGI (Bachelor & Mastère IA/Big Data). Pipelines temps réel, APIs d'inférence, MLOps et Cloud.</p>
         <div class="cta">
-          <a class="btn primary" href="#projects">Découvrir mes projets</a>
-          <a class="btn" href="#contact">Me contacter</a>
+          <a class="btn primary" href="#contact">📌 Je suis à la recherche d’un poste de Data Engineer</a>
+          <a class="btn" href="#projects">Voir mes projets</a>
           <a class="btn" href="CV.pdf" download>📄 Télécharger mon CV</a>
         </div>
         <div class="statbar">
-          <span class="pill">5+ ans de projets</span>
           <span class="pill">IA · Big Data · Cloud</span>
           <span class="pill">Python · Kafka · Kubernetes</span>
-          <span class="pill">À l'écoute : Data Engineer</span>
+          <span class="pill">TOEIC 790</span>
         </div>
       </div>
-      <div class="hero-card">
-        <strong>Extrait de code</strong>
-        <pre class="code"><code>// Exemple – Pipeline d'inférence (pseudo-code)
-app.post("/predict", upload.json, async (req,res) =&gt; {
-  const features = await preprocess(req.body);
-  const y = await model.predict(features);
-  const log = await audit.write({ t: Date.now(), features, y });
-  return res.json({ ok: true, prediction: y });
-});
-        </code></pre>
-        <div class="chips">
-          <span class="chip">MLOps</span>
-          <span class="chip">CI/CD</span>
-          <span class="chip">Observabilité</span>
-        </div>
+    </div>
+    <div class="container">
+      <div class="card" style="margin-top:18px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+        <div><strong>🎯 Objectif</strong> — <span class="muted">À la recherche d’un poste de <b>Data Engineer</b> (CDI/alternance).</span></div>
+        <a class="btn primary" href="#contact">Me contacter</a>
       </div>
     </div>
   </header>
 
   <!-- Experience -->
-  <section id="experience">
+  <section id="experience-pro">
     <div class="container">
       <div class="section-head">
-        <h2>Parcours</h2>
-        <p class="section-desc">Études et spécialisation</p>
+        <h2>Expérience professionnelle</h2>
+        <p class="section-desc">Missions & réalisations clés</p>
       </div>
       <div class="timeline">
         <div class="tl-line"></div>
         <div class="card">
-          <h3>Alternance – Visiodent (Veasy)</h3>
+          <h3>Alternance — Visiodent (Veasy)</h3>
           <p class="muted">2023–2025 · Clichy</p>
-          <p>Dév. sur le logiciel Veasy · <b>Migration de données</b> · Création d'une <b>IA d'assistance</b> (C#/.NET & Python) pour guider les utilisateurs avec précision.</p>
-          <div class="chips">
-            <span class="chip">C#/.NET</span><span class="chip">Python</span><span class="chip">IA appliquée</span>
-          </div>
+          <p>Développement sur Veasy, <b>migration de données</b>, création d’une <b>IA d’assistance</b> (C#/.NET & Python) pour guider les utilisateurs.</p>
+          <div class="chips"><span class="chip">C#/.NET</span><span class="chip">Python</span><span class="chip">IA appliquée</span></div>
         </div>
         <div class="tl-line"></div>
         <div class="card">
-          <h3>Stage – Genymobile</h3>
+          <h3>Stage — Genymobile</h3>
           <p class="muted">2022 · Lyon</p>
-          <p>Implémentation <b>C++</b> du chargement/analyse de fichiers KML pour lire des traces GPS sur émulateur Android.</p>
-          <div class="chips">
-            <span class="chip">C++</span><span class="chip">KML</span><span class="chip">Android (émulateur)</span>
-          </div>
+          <p>Implémentation <b>C++</b> du chargement/analyse KML pour lire des traces GPS sur émulateur Android.</p>
+          <div class="chips"><span class="chip">C++</span><span class="chip">KML</span><span class="chip">Android (émulateur)</span></div>
         </div>
         <div class="tl-line"></div>
         <div class="card">
-          <h3>Stage – Socipar</h3>
+          <h3>Stage — Socipar</h3>
           <p class="muted">2021 · Le Lamentin (Martinique)</p>
           <p>Développement de deux logiciels de gestion sous WinDev.</p>
-          <div class="chips">
-            <span class="chip">WinDev</span><span class="chip">Gestion</span>
-          </div>
+          <div class="chips"><span class="chip">WinDev</span><span class="chip">Gestion</span></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-head">
+        <h2>Études</h2>
+        <p class="section-desc">Formation & spécialisations</p>
+      </div>
+      <div class="timeline">
         <div class="tl-line"></div>
         <div class="card">
-          <h3>ESGI – Ingénierie de l'IA & Big Data</h3>
+          <h3>ESGI – Intelligence Artificielle & Big Data</h3>
           <p class="muted">2022–2025 · Paris</p>
-          <p>Bachelor puis Mastère (Titre RNCP niv. 7). Spécialisation IA/Big Data : MLOps, cloud, NLP, streaming.</p>
-          <div class="chips">
-            <span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Airflow</span><span class="chip">Terraform</span>
-          </div>
+          <p>Bachelor puis Mastère (Titre RNCP niv. 7). Spécialisation IA/Big Data : NLP, streaming, MLOps.</p>
+          <div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Airflow</span><span class="chip">Terraform</span></div>
         </div>
         <div class="tl-line"></div>
         <div class="card">
           <h3>DUT Informatique</h3>
           <p class="muted">2019–2022 · Clermont-Ferrand</p>
-          <p>Algo, POO, web, BDD. Option SI & spécialité ISN au Bac (Nemours).</p>
-          <div class="chips">
-            <span class="chip">Java</span><span class="chip">SQL</span><span class="chip">Web</span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-          <h3>ESGI – Ingénierie de l'IA & Big Data</h3>
-          <p class="muted">2022–2025 · Paris</p>
-          <p>Spécialisation IA/Big Data : pipelines temps réel (Kafka/Flink), NLP, deep learning, MLOps (Docker, CI/CD, Cloud).</p>
-          <div class="chips">
-            <span class="chip">IA</span>
-            <span class="chip">Big Data</span>
-            <span class="chip">MLOps</span>
-          </div>
-        </div>
-        <div class="tl-line"></div>
-        <div class="card">
-          <h3>DUT Informatique</h3>
-          <p class="muted">2020–2022</p>
-          <p>Algorithmique, POO, web, bases de données. Premiers projets concrets et portfolio initial.</p>
-          <div class="chips">
-            <span class="chip">Algo</span>
-            <span class="chip">POO</span>
-            <span class="chip">SQL</span>
-          </div>
+          <p>Algorithmique, POO, web, bases de données. Bac S (2019) à Nemours – option SI & spécialité ISN.</p>
+          <div class="chips"><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">POO</span></div>
         </div>
       </div>
     </div>
@@ -335,25 +304,49 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
     <div class="container">
       <div class="section-head">
         <h2>Compétences</h2>
-        <p class="section-desc">Stack technique principale</p>
+        <p class="section-desc">Présentation claire sans jauges</p>
       </div>
-      <div class="skills">
-        <div class="skill"><strong>Langages</strong><div class="meter"><b style="width:90%"></b></div><p class="muted">Python, Java, C/C++, C#/.NET, Scala, Ruby</p></div>
-        <div class="skill"><strong>ML/IA</strong><div class="meter"><b style="width:85%"></b></div><p class="muted">Machine/Deep Learning, RL, NLP</p></div>
-        <div class="skill"><strong>Data Engineering</strong><div class="meter"><b style="width:88%"></b></div><p class="muted">Kafka, Spark/Flink, ETL, Airflow</p></div>
-        <div class="skill"><strong>Cloud & DevOps</strong><div class="meter"><b style="width:82%"></b></div><p class="muted">Kubernetes, Docker, CI/CD, Terraform, GCP/AWS/Azure</p></div>
-        <div class="skill"><strong>Web</strong><div class="meter"><b style="width:75%"></b></div><p class="muted">ASP.NET Core, HTML/CSS/JS, Bootstrap</p></div>
-        <div class="skill"><strong>BDD</strong><div class="meter"><b style="width:80%"></b></div><p class="muted">PostgreSQL, SQL Server, Oracle, MariaDB, BigQuery</p></div>
-        <div class="skill"><strong>Modélisation & Méthodo</strong><div class="meter"><b style="width:78%"></b></div><p class="muted">UML, E/A, Design Patterns, Agile/Scrum</p></div>
-        <div class="skill"><strong>OS & Réseaux</strong><div class="meter"><b style="width:76%"></b></div><p class="muted">Linux, Windows, Admin réseaux locaux</p></div>
-      </div><p class="muted">FastAPI, PyTorch, scikit-learn</p></div>
-        <div class="skill"><strong>Data & Streaming</strong><div class="meter"><b style="width:88%"></b></div><p class="muted">Kafka, Flink, Postgres</p></div>
-        <div class="skill"><strong>Cloud & DevOps</strong><div class="meter"><b style="width:80%"></b></div><p class="muted">Docker, CI/CD, Linux</p></div>
-        <div class="skill"><strong>NLP</strong><div class="meter"><b style="width:84%"></b></div><p class="muted">RAG, embeddings, LLM</p></div>
-        <div class="skill"><strong>Web</strong><div class="meter"><b style="width:76%"></b></div><p class="muted">HTML/CSS/JS, React (base)</p></div>
-        <div class="skill"><strong>BDD</strong><div class="meter"><b style="width:78%"></b></div><p class="muted">SQL, ORM, optimisation</p></div>
-        <div class="skill"><strong>Vision</strong><div class="meter"><b style="width:62%"></b></div><p class="muted">OpenCV, Data augm.</p></div>
-        <div class="skill"><strong>Anglais</strong><div class="meter"><b style="width:72%"></b></div><p class="muted">Tech writing, meetings</p></div>
+      <div class="skills" style="grid-template-columns:repeat(3,1fr)">
+        <div class="skill"><strong>Langages</strong>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">C#/.NET</span><span class="chip">Scala</span><span class="chip">Ruby</span><span class="chip">SQL</span><span class="chip">NoSQL</span><span class="chip">PL/SQL</span><span class="chip">HTML5</span><span class="chip">CSS</span><span class="chip">PHP7</span>
+          </div>
+        </div>
+        <div class="skill"><strong>IA / ML</strong>
+          <div class="chips">
+            <span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">Reinforcement Learning</span><span class="chip">NLP</span>
+          </div>
+        </div>
+        <div class="skill"><strong>Data Engineering</strong>
+          <div class="chips">
+            <span class="chip">Kafka</span><span class="chip">Spark</span><span class="chip">Flink</span><span class="chip">Airflow</span><span class="chip">ETL</span>
+          </div>
+        </div>
+        <div class="skill"><strong>Cloud & DevOps</strong>
+          <div class="chips">
+            <span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">Terraform</span><span class="chip">GCP</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Azure DevOps</span>
+          </div>
+        </div>
+        <div class="skill"><strong>SGBD</strong>
+          <div class="chips">
+            <span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">Oracle</span><span class="chip">MariaDB</span><span class="chip">BigQuery</span>
+          </div>
+        </div>
+        <div class="skill"><strong>Modélisation & Méthodo</strong>
+          <div class="chips">
+            <span class="chip">UML</span><span class="chip">E/A</span><span class="chip">Design Patterns</span><span class="chip">Agile/Scrum</span>
+          </div>
+        </div>
+        <div class="skill"><strong>Outils</strong>
+          <div class="chips">
+            <span class="chip">Visual Studio</span><span class="chip">Git</span><span class="chip">Bootstrap</span><span class="chip">Eclipse</span><span class="chip">PyCharm</span><span class="chip">IntelliJ</span>
+          </div>
+        </div>
+        <div class="skill"><strong>OS & Réseaux</strong>
+          <div class="chips">
+            <span class="chip">Linux</span><span class="chip">Windows</span><span class="chip">Admin réseaux locaux</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -432,8 +425,7 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
     });
 
     // Scroll spy (active link)
-    const sections = ['about','experience','projects','skills','contact'].map(id=>document.getElementById(id));
-    const navlinks = [...document.querySelectorAll('.navlinks a[href^="#"]')];
+    const sections = ['about','experience-pro','education','projects','skills','contact'].map(id=>document.getElementById(id));
     const obs = new IntersectionObserver((entries)=>{
       entries.forEach(ent=>{
         if(ent.isIntersecting){
