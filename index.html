@@ -141,18 +141,19 @@
   <header class="hero" id="about">
     <div class="container hero-grid">
       <div>
-        <span class="badge">Ingénierie de l'IA & Big Data · Paris</span>
+        <span class="badge">Expert en ingénierie de l'IA & Big Data · Seine-et-Marne (77)</span>
         <h1 class="title">Construire des systèmes <span style="background:linear-gradient(120deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">intelligents</span> utiles et fiables.</h1>
-        <p class="subtitle">Ingénieur IA & Data, spécialisé en MLOps, NLP et pipelines temps réel. <br/> DUT Informatique → ESGI (Big Data & IA). Je conçois des modèles, j'industrialise, et je livre en production.</p>
+        <p class="subtitle">Expert en ingénierie de l'intelligence artificielle (24 ans). DUT Informatique → ESGI (Bachelor + Mastère IA & Big Data). Je construis des pipelines temps réel, des APIs d'inférence robustes et des systèmes IA industrialisés (MLOps / Cloud / Data Engineering). À l'écoute d'un poste de <b>Data Engineer</b>.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">Découvrir mes projets</a>
           <a class="btn" href="#contact">Me contacter</a>
-          <a class="btn" href="#cv" onclick="alert('Ajoute ton fichier CV.pdf à la racine et remplace le lien !'); return false;">Télécharger mon CV ↘</a>
+          <a class="btn" href="CV.pdf" download>📄 Télécharger mon CV</a>
         </div>
         <div class="statbar">
           <span class="pill">5+ ans de projets</span>
           <span class="pill">IA · Big Data · Cloud</span>
-          <span class="pill">Python · PyTorch · Kafka</span>
+          <span class="pill">Python · Kafka · Kubernetes</span>
+          <span class="pill">À l'écoute : Data Engineer</span>
         </div>
       </div>
       <div class="hero-card">
@@ -183,6 +184,51 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
       </div>
       <div class="timeline">
         <div class="tl-line"></div>
+        <div class="card">
+          <h3>Alternance – Visiodent (Veasy)</h3>
+          <p class="muted">2023–2025 · Clichy</p>
+          <p>Dév. sur le logiciel Veasy · <b>Migration de données</b> · Création d'une <b>IA d'assistance</b> (C#/.NET & Python) pour guider les utilisateurs avec précision.</p>
+          <div class="chips">
+            <span class="chip">C#/.NET</span><span class="chip">Python</span><span class="chip">IA appliquée</span>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>Stage – Genymobile</h3>
+          <p class="muted">2022 · Lyon</p>
+          <p>Implémentation <b>C++</b> du chargement/analyse de fichiers KML pour lire des traces GPS sur émulateur Android.</p>
+          <div class="chips">
+            <span class="chip">C++</span><span class="chip">KML</span><span class="chip">Android (émulateur)</span>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>Stage – Socipar</h3>
+          <p class="muted">2021 · Le Lamentin (Martinique)</p>
+          <p>Développement de deux logiciels de gestion sous WinDev.</p>
+          <div class="chips">
+            <span class="chip">WinDev</span><span class="chip">Gestion</span>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>ESGI – Ingénierie de l'IA & Big Data</h3>
+          <p class="muted">2022–2025 · Paris</p>
+          <p>Bachelor puis Mastère (Titre RNCP niv. 7). Spécialisation IA/Big Data : MLOps, cloud, NLP, streaming.</p>
+          <div class="chips">
+            <span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Airflow</span><span class="chip">Terraform</span>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>DUT Informatique</h3>
+          <p class="muted">2019–2022 · Clermont-Ferrand</p>
+          <p>Algo, POO, web, BDD. Option SI & spécialité ISN au Bac (Nemours).</p>
+          <div class="chips">
+            <span class="chip">Java</span><span class="chip">SQL</span><span class="chip">Web</span>
+          </div>
+        </div>
+      </div>
         <div class="card">
           <h3>ESGI – Ingénierie de l'IA & Big Data</h3>
           <p class="muted">2022–2025 · Paris</p>
@@ -219,11 +265,41 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
         <button class="filter active" data-filter="all">Tout</button>
         <button class="filter" data-filter="ia">IA</button>
         <button class="filter" data-filter="bigdata">Big Data</button>
+        <button class="filter" data-filter="ml">ML</button>
+        <button class="filter" data-filter="cloud">Cloud</button>
         <button class="filter" data-filter="web">Web</button>
         <button class="filter" data-filter="vr">VR</button>
       </div>
       <div class="grid" id="grid">
-        <!-- Project cards -->
+        <!-- New flagship project -->
+        <article class="project" data-tags="ml bigdata cloud ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener"></a>
+          <div class="thumb">TRADING · IA</div>
+          <div class="body">
+            <h3>Plateforme d'aide à la décision pour traders</h3>
+            <p>Web-app (ASP.NET Core + backend Python) : prédiction court terme, chandeliers, analyse de sentiment multi‑sources. Infra GCP industrialisée.</p>
+            <div class="tags"><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">Airflow</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span></div>
+          </div>
+        </article>
+        <!-- Existing projects -->
+        <article class="project" data-tags="bigdata ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener"></a>
+          <div class="thumb">STREAM</div>
+          <div class="body">
+            <h3>Pipeline temps réel Crypto Sentiment</h3>
+            <p>Ingestion Reddit→Kafka→Flink→Postgres, NLP, dashboard.</p>
+            <div class="tags"><span class="tag">Kafka</span><span class="tag">Flink</span><span class="tag">NLP</span></div>
+          </div>
+        </article>
+        <article class="project" data-tags="ia">
+          <a class="stretched" href="https://github.com/jobordeau/Projet-IA" target="_blank" rel="noopener"></a>
+          <div class="thumb">IA</div>
+          <div class="body">
+            <h3>Projet IA</h3>
+            <p>Classification supervisée, validation croisée, métriques.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span></div>
+          </div>
+        </article>
         <article class="project" data-tags="web">
           <a class="stretched" href="https://github.com/jobordeau/todo-list-php" target="_blank" rel="noopener"></a>
           <div class="thumb">WEB</div>
@@ -242,33 +318,6 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
             <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">VR</span></div>
           </div>
         </article>
-        <article class="project" data-tags="ia">
-          <a class="stretched" href="https://github.com/jobordeau/Projet-IA" target="_blank" rel="noopener"></a>
-          <div class="thumb">IA</div>
-          <div class="body">
-            <h3>Projet IA</h3>
-            <p>Classification supervisée, validation croisée, métriques.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span></div>
-          </div>
-        </article>
-        <article class="project" data-tags="bigdata">
-          <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-          <div class="thumb">STREAM</div>
-          <div class="body">
-            <h3>Pipeline temps réel Crypto Sentiment</h3>
-            <p>Ingestion Reddit→Kafka→Flink→Postgres, NLP, dashboard.</p>
-            <div class="tags"><span class="tag">Kafka</span><span class="tag">Flink</span><span class="tag">NLP</span></div>
-          </div>
-        </article>
-        <article class="project" data-tags="ia bigdata">
-          <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-          <div class="thumb">MLOps</div>
-          <div class="body">
-            <h3>API d'inférence & Monitoring</h3>
-            <p>Serving modèle, CI/CD, métriques, traçabilité.</p>
-            <div class="tags"><span class="tag">Docker</span><span class="tag">FastAPI</span><span class="tag">Prometheus</span></div>
-          </div>
-        </article>
         <article class="project" data-tags="web ia">
           <a class="stretched" href="#" target="_blank" rel="noopener"></a>
           <div class="thumb">NLP</div>
@@ -279,8 +328,7 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
           </div>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Skills -->
   <section id="skills">
@@ -290,7 +338,15 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
         <p class="section-desc">Stack technique principale</p>
       </div>
       <div class="skills">
-        <div class="skill"><strong>Python</strong><div class="meter"><b style="width:92%"></b></div><p class="muted">FastAPI, PyTorch, scikit-learn</p></div>
+        <div class="skill"><strong>Langages</strong><div class="meter"><b style="width:90%"></b></div><p class="muted">Python, Java, C/C++, C#/.NET, Scala, Ruby</p></div>
+        <div class="skill"><strong>ML/IA</strong><div class="meter"><b style="width:85%"></b></div><p class="muted">Machine/Deep Learning, RL, NLP</p></div>
+        <div class="skill"><strong>Data Engineering</strong><div class="meter"><b style="width:88%"></b></div><p class="muted">Kafka, Spark/Flink, ETL, Airflow</p></div>
+        <div class="skill"><strong>Cloud & DevOps</strong><div class="meter"><b style="width:82%"></b></div><p class="muted">Kubernetes, Docker, CI/CD, Terraform, GCP/AWS/Azure</p></div>
+        <div class="skill"><strong>Web</strong><div class="meter"><b style="width:75%"></b></div><p class="muted">ASP.NET Core, HTML/CSS/JS, Bootstrap</p></div>
+        <div class="skill"><strong>BDD</strong><div class="meter"><b style="width:80%"></b></div><p class="muted">PostgreSQL, SQL Server, Oracle, MariaDB, BigQuery</p></div>
+        <div class="skill"><strong>Modélisation & Méthodo</strong><div class="meter"><b style="width:78%"></b></div><p class="muted">UML, E/A, Design Patterns, Agile/Scrum</p></div>
+        <div class="skill"><strong>OS & Réseaux</strong><div class="meter"><b style="width:76%"></b></div><p class="muted">Linux, Windows, Admin réseaux locaux</p></div>
+      </div><p class="muted">FastAPI, PyTorch, scikit-learn</p></div>
         <div class="skill"><strong>Data & Streaming</strong><div class="meter"><b style="width:88%"></b></div><p class="muted">Kafka, Flink, Postgres</p></div>
         <div class="skill"><strong>Cloud & DevOps</strong><div class="meter"><b style="width:80%"></b></div><p class="muted">Docker, CI/CD, Linux</p></div>
         <div class="skill"><strong>NLP</strong><div class="meter"><b style="width:84%"></b></div><p class="muted">RAG, embeddings, LLM</p></div>
@@ -312,13 +368,25 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
       <div class="contact">
         <div class="card">
           <h3>Coordonnées</h3>
-          <p class="muted">Disponible pour alternance, CDI junior ou missions freelances.</p>
+          <p class="muted">À l'écoute d'un poste de <b>Data Engineer</b>. Basé en Seine‑et‑Marne (77).</p>
           <div class="chips">
-            <a class="chip" href="mailto:jovann.bordeau@gmail.com">📧 jovann.bordeau@gmail.com</a>
+            <a class="chip" href="mailto:jbordeau2@myges.fr">📧 jbordeau2@myges.fr</a>
             <button class="chip" id="copyMail" aria-label="Copier l'email">📋 Copier l'email</button>
+            <span class="chip">📞 06 51 21 83 57</span>
             <a class="chip" href="https://github.com/jobordeau" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a class="chip" href="https://jobordeau.github.io/" target="_blank" rel="noopener">🌐 Portfolio</a>
             <a class="chip" href="#" onclick="alert('Ajoute ton URL LinkedIn !');return false;">🔗 LinkedIn</a>
+            <span class="chip">🇬🇧 Anglais courant (TOEIC 790)</span>
+            <span class="chip">🚘 Permis B</span>
           </div>
+          <a class="btn" href="CV.pdf" download>📄 Télécharger le CV (PDF)</a>
+        </div>
+        <div class="card">
+          <h3>Me laisser un message</h3>
+          <p class="muted">Ce bouton ouvre votre client e‑mail.</p>
+          <a class="btn primary" href="mailto:jbordeau2@myges.fr?subject=Contact%20Portfolio&body=Bonjour%20Jovann,%20">Écrire un e‑mail</a>
+        </div>
+      </div>
           <a class="btn" href="#about">En savoir plus sur moi</a>
         </div>
         <div class="card">
@@ -378,7 +446,7 @@ app.post("/predict", upload.json, async (req,res) =&gt; {
 
     // Copy email
     document.getElementById('copyMail').addEventListener('click', async ()=>{
-      try{ await navigator.clipboard.writeText('jovann.bordeau@gmail.com');
+      try{ await navigator.clipboard.writeText('jbordeau2@myges.fr');
         const b = document.getElementById('copyMail');
         b.textContent = '✅ Copié !'; setTimeout(()=> b.textContent='📋 Copier l\'email', 1600);
       }catch{ alert('Impossible de copier'); }
