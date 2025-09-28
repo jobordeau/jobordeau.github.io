@@ -557,15 +557,18 @@
                 <button class="filter active" data-filter="all">Tout</button>
                 <button class="filter" data-filter="ia">IA</button>
                 <button class="filter" data-filter="bigdata">Big Data</button>
-                <button class="filter" data-filter="ml">ML</button>
+                <button class="filter" data-filter="streaming">Streaming</button>
+                <button class="filter" data-filter="bi">Dashboard</button>
                 <button class="filter" data-filter="cloud">Cloud</button>
-                <button class="filter" data-filter="web">Web</button>
-                <button class="filter" data-filter="vr">VR</button>
+                <button class="filter" data-filter="api">API</button>
+                <button class="filter" data-filter="web">WEB</button>
+                <button class="filter" data-filter="dut">DUT</button>
+                <button class="filter" data-filter="master">Master</button>
             </div>
 
             <div class="grid" id="grid">
                 <!-- 1 -->
-                <article class="project" data-tags="ml bigdata cloud ia">
+                <article class="project" data-tags="ia bigdata streaming bi cloud api web master">
                     <a class="stretched" href="https://github.com/Saytk/PA_2025_UPGRADED" target="_blank" rel="noopener" aria-label="Voir le projet Plateforme d'aide à la décision pour traders"></a>
                     <div class="thumb" style="--thumb: url('images/trading.jpg');">
                         <span class="thumb-label">TRADING IA</span>
@@ -578,7 +581,7 @@
                 </article>
 
                 <!-- 2 -->
-                <article class="project" data-tags="ml bigdata cloud ia">
+                <article class="project" data-tags="ia master">
                     <a class="stretched" href="https://github.com/Saytk/DeeplearningPond" target="_blank" rel="noopener" aria-label="Voir le projet Pond RL"></a>
                     <div class="thumb" style="--thumb: url('images/pond-rl.jpg');">
                         <span class="thumb-label">POND</span>
@@ -591,10 +594,10 @@
                 </article>
 
                 <!-- 3 -->
-                <article class="project" data-tags="ml bigdata cloud ia">
+                <article class="project" data-tags="bigdata streaming bi api web master">
                     <a class="stretched" href="https://github.com/jobordeau/StatFilmKafka" target="_blank" rel="noopener" aria-label="Voir le projet Stream Processing Films"></a>
                     <div class="thumb" style="--thumb: url('images/films-stream.jpg');">
-                        <span class="thumb-label">STATISTIQUE DE VUES DE FILMS EN<br />TEMPS RÉEL</span>
+                        <span class="thumb-label">STATISTIQUES DE VUES DE FILMS EN<br />TEMPS RÉEL</span>
                     </div>
                     <div class="body">
                         <h3>Stream processing avec Kafka</h3>
@@ -604,20 +607,20 @@
                 </article>
 
                 <!-- 4 -->
-                <article class="project" data-tags="ml bigdata cloud ia">
+                <article class="project" data-tags="ia bigdata cloud master">
                     <a class="stretched" href="Slides_projet.pdf" download target="_blank" rel="noopener" aria-label="Voir le projet Classification Compositeur"></a>
                     <div class="thumb" style="--thumb: url('images/databricks-ml.jpg');">
                         <span class="thumb-label">CLASSIFICATION D'UN COMPOSITEUR</span>
                     </div>
                     <div class="body">
-                        <h3>Cloud avancé pour le ML & Big Data</h3>
+                        <h3>Cloud avancé pour le ML et Big Data</h3>
                         <p>Projet de bout en bout sur Databricks.</p>
                         <div class="tags"><span class="tag">Databricks</span></div>
                     </div>
                 </article>
 
                 <!-- 5 -->
-                <article class="project" data-tags="ml bigdata cloud ia">
+                <article class="project" data-tags="bigdata streaming bi master">
                     <a class="stretched" href="ESGI_SuiteElastic-NBA_E1_08-25-16.03.04_Projetelasticsearchv2.pdf" download target="_blank" rel="noopener" aria-label="Voir le projet NBA Analytics"></a>
                     <div class="thumb" style="--thumb: url('images/nba.jpg');">
                         <span class="thumb-label">NBA DATA ANALYTICS</span>
@@ -630,33 +633,35 @@
                 </article>
 
                 <!-- 6 -->
-                <article class="project" data-tags="ml bigdata cloud ia">
+                <article class="project" data-tags="bigdata streaming bi api web master">
                     <a class="stretched" href="https://github.com/jobordeau/SparkStreamingProject" target="_blank" rel="noopener" aria-label="Voir le projet Discord Trend"></a>
                     <div class="thumb" style="--thumb: url('images/discord-trend.jpg');">
                         <span class="thumb-label">TENDANCE DES MESSAGES</span>
                     </div>
                     <div class="body">
                         <h3>Analyse en temps réel de Discord</h3>
-                        <p>Kafka + Spark Streaming + PySpark + HDFS.</p>
+                        <p>
+                            Récupération des données stockées sur HDFS. Lecture des données. Création de vues temporaires. Requêtes pour obtenir des dataframes adaptés. Affichage des données.
+                        </p>
                         <div class="tags"><span class="tag">Python</span><span class="tag">Scala</span><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Spark Streaming</span><span class="tag">Hadoop HDFS</span></div>
                     </div>
                 </article>
 
                 <!-- 7 -->
-                <article class="project" data-tags="bigdata ia">
+                <article class="project" data-tags="dut">
                     <a class="stretched" href="https://github.com/jobordeau/bovie_track" target="_blank" rel="noopener" aria-label="Voir le projet Bovie Track"></a>
                     <div class="thumb" style="--thumb: url('images/bovie-track.jpg');">
                         <span class="thumb-label">BOVIE TRACK</span>
                     </div>
                     <div class="body">
                         <h3>Bibliothèque personnelle de films et séries</h3>
-                        <p>Suivi visionnage/lecture, statuts et sauvegarde.</p>
+                        <p>Suivi du visionnage et de la lecture, gestion des statuts et sauvegarde des données.</p>
                         <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span></div>
                     </div>
                 </article>
 
                 <!-- 8 -->
-                <article class="project" data-tags="web">
+                <article class="project" data-tags="dut">
                     <a class="stretched" href="https://github.com/jobordeau/projet_rv_golf" target="_blank" rel="noopener" aria-label="Voir le projet VR Golf"></a>
                     <div class="thumb" style="--thumb: url('images/vr-golf.jpg');">
                         <span class="thumb-label">VR GOLF</span>
@@ -669,7 +674,7 @@
                 </article>
 
                 <!-- 9 -->
-                <article class="project" data-tags="vr">
+                <article class="project" data-tags="web dut">
                     <a class="stretched" href="https://github.com/jobordeau/todo-list-php" target="_blank" rel="noopener" aria-label="Voir le projet Todo List PHP"></a>
                     <div class="thumb" style="--thumb: url('images/todo-list.jpg');">
                         <span class="thumb-label">TODO LIST</span>
@@ -693,7 +698,7 @@
                     <h3>Alternance — Visiodent</h3>
                     <p class="muted">2023–2025 · Clichy</p>
                     <p>Développement sur Veasy, <b>migration de données</b>, création d’une <b>IA d’assistance</b> (C#/.NET & Python).</p>
-                    <div class="chips"><span class="chip">C#/.NET</span><span class="chip">Python</span><span class="chip">IA appliquée</span></div>
+                    <div class="chips"><span class="chip">C#/.NET</span><span class="chip">Python</span><span class="chip">NLP</span><span class="chip">RAG</span></div>
                 </div>
                 <div class="tl-line"></div>
                 <div class="card">
@@ -722,14 +727,14 @@
                     <h3>
                         Mastère Intelligence Artificielle et Big Data
                     </h3>
-                    <p class="muted">2022–2025 · ESGI Paris (75)</p>
+                    <p class="muted">2023–2025 · ESGI Paris (75)</p>
                     <p>Expert en ingénierie de l'intelligence artificielle.</p>
                     <div class="chips"><span class="chip">Modélisation et Algorithmique</span><span class="chip">Développement</span><span class="chip">Architecture et Data</span><span class="chip">Projets et application métier</span><span class="chip">Management et communication</span><span class="chip">Majeure Data Engineering</span></div>
                 </div>
                 <div class="tl-line"></div>
                 <div class="card">
                     <h3>Bachelor Intelligence Artificielle et Big Data</h3>
-                    <p class="muted">2022–2025 · ESGI Paris (75)</p>
+                    <p class="muted">2022–2023 · ESGI Paris (75)</p>
                     <p>Chargé de Développement de Solutions Applicatives ou Logicielles.</p>
                     <div class="chips"><span class="chip">Sciences de l'ingénieur</span><span class="chip">Languages et développement</span><span class="chip">Machine learning</span><span class="chip">Base de données</span><span class="chip">Environnements Big Data</span></div>
                 </div>
