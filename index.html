@@ -96,8 +96,31 @@
     .filter{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);cursor:pointer;color:var(--muted);font-weight:700}
     .filter.active{background:linear-gradient(135deg,var(--brand) 35%,var(--brand-2));color:#0b0d12;border:0}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
     .project{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
-    .project .thumb{height:160px;background:linear-gradient(135deg, color-mix(in srgb, var(--brand) 30%, #0000), color-mix(in srgb, var(--brand-2) 20%, #0000)); display:grid; place-items:center; font-weight:800; letter-spacing:.5px}
+    /* Thumb avec image de fond + overlay (fallback: gradient) */
+    .project .thumb{
+      position: relative;
+      height: 180px;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: .5px;
+      overflow: hidden;
+      background: center / cover no-repeat;
+      background-image: var(--thumb, linear-gradient(135deg, rgba(124,92,255,.30), rgba(0,224,164,.20)));
+      text-align: center;
+      padding: 8px;
+    }
+    .project .thumb::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(0deg, rgba(0,0,0,.38), rgba(0,0,0,.28));
+      pointer-events:none;
+    }
+
     .project .body{padding:14px}
     .project h3{margin:0 0 6px; font-size:18px}
     .project p{margin:0;color:var(--muted);font-size:14px}
@@ -176,7 +199,7 @@
           <img src="images/profile.jpg" alt="Photo de profil de Jovann Bordeau" loading="eager"/>
         </div>
         <div class="avatar-badge">
-            <span class="badge">Expert en ingénierie de l'intelligence artificielle</span>
+          <span class="badge">Expert en ingénierie de l'intelligence artificielle</span>
           <p class="subtitle">24 ans — Bac+5 — Île-de-France</p>
         </div>
       </div>
@@ -206,99 +229,106 @@
         <button class="filter" data-filter="web">Web</button>
         <button class="filter" data-filter="vr">VR</button>
       </div>
+
       <div class="grid" id="grid">
-          <article class="project" data-tags="ml bigdata cloud ia">
-              <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-              <div class="thumb">TRADING · IA</div>
-              <div class="body">
-                  <h3>Plateforme d'aide à la décision pour traders</h3>
-                  <p>Prédiction court terme, chandeliers, analyse de sentiment multi-sources. Infra GCP industrialisée.</p>
-                  <div class="tags"><span class="tag">Python</span><span class="tag">ASP.NET Core</span><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">Airflow</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="ml bigdata cloud ia">
-              <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-              <div class="thumb">POND</div>
-              <div class="body">
-                  <h3>Apprentissage par renforcement appliqué au jeu Pond</h3>
-                  <p>
-                      Evaluer différentes techniques d'apprentissage par renforcement. Comprendre les différents atouts de chaque algorithme et savoir quand les appliquer.
-                  </p>
-                  <div class="tags"><span class="tag">DRL</span><span class="tag">python</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="ml bigdata cloud ia">
-              <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-              <div class="thumb">STATISTIQUE DE VUES DE FILMS EN <BR /> TEMPS REEL</div>
-              <div class="body">
-                  <h3>stream processing avec kafka</h3>
-                  <p>
-                      Rentre utilisable les données qui arrivent dans plusieurs topics Kafka.
-                  </p>
-                  <div class="tags"><span class="tag">Java</span><span class="tag">Kafka</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="ml bigdata cloud ia">
-              <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-              <div class="thumb">CLASSIFICATION D'UN COMPOSITEUR <BR /> DE MUSIQUE</div>
-              <div class="body">
-                  <h3>cloud avancé pour le ml et le big data</h3>
-                  <p>
-                      Faire un projet de ml et de big data de bout en bout en utilisant la plateforme databricks
-                  </p>
-                  <div class="tags"><span class="tag">Databricks</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="ml bigdata cloud ia">
-              <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-              <div class="thumb">NBA DATA ANALYTICS</div>
-              <div class="body">
-                  <h3>Dashboard interactif</h3>
-                  <p>
-                      Interroger et visualiser un dataset NBA, répondre à des questions via des visualisations, des requêtes ES|QL et des jobs ML, livrer le tout sous forme de dashboard complet.
-                  </p>
-                  <div class="tags"><span class="tag">Elasticsearch</span><span class="tag">Kibana</span><span class="tag">ES|QL</span><span class="tag">ML</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="ml bigdata cloud ia">
-              <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-              <div class="thumb">TENDANCE DES MESSAGES</div>
-              <div class="body">
-                  <h3>Analyser la tendance des messages sur Discord en temps réel</h3>
-                  <p>
-                      Exploration des différents outils que Spark mets à disposition pour le traitement de la donnée. Mise en place d’applications Big Data permettant de faire du temps réel. Manipulation des différentes APIs de Spark.
-                  </p>
-                  <div class="tags"><span class="tag">Python</span><span class="tag">Scala</span><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Spark Streaming</span><span class="tag">Hadoop HDFS</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="bigdata ia">
-              <a class="stretched" href="#" target="_blank" rel="noopener"></a>
-              <div class="thumb">BOVIE TRACK</div>
-              <div class="body">
-                  <h3>Bibliothèque personnelle de films et séries</h3>
-                  <p>Réalisé en première année de DUT Informatique. Cette application est une bibliothèque personnelle qui répertorie les films, séries et livres que l’utilisateur a visionnés ou a lus, ou bien qu’il est en train de regarder ou de lire.</p>
-                  <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="web">
-              <a class="stretched" href="https://github.com/jobordeau/todo-list-php" target="_blank" rel="noopener"></a>
-              <div class="thumb">VR GOLF</div>
-              <div class="body">
-                  <h3>Simuler une partie de mini-golf en 3D</h3>
-                  <p>Réalisé en deuxième année de DUT Informatique. Le joueur doit envoyer la balle dans le bogey (le trou). Il peut utiliser autant de coup qu’il veut mais l’objectif est d’en faire le moins possible. Dès que la balle arrive dans le bogey le joueur change de niveau. Le jeu se termine lorsque tous les niveaux sont accomplis.
-                  </p>
-                  <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">MonoGame</span><span class="tag">BEPUphysics</span></div>
-              </div>
-          </article>
-          <article class="project" data-tags="vr">
-              <a class="stretched" href="https://github.com/jobordeau/projet_rv_golf" target="_blank" rel="noopener"></a>
-              <div class="thumb">TODO LIST</div>
-              <div class="body">
-                  <h3>Projet VR Golf</h3>
-                  <p>Réalisé en deuxième année de DUT Informatique. C'est une application web de listes de tâches, en utilisant le patron MVC</p>
-                  <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span><span class="tag">HTML</span></div>
-              </div>
-          </article>
+        <!-- 1 -->
+        <article class="project" data-tags="ml bigdata cloud ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener" aria-label="Voir le projet Plateforme d'aide à la décision pour traders"></a>
+          <div class="thumb" style="--thumb: url('images/projets/trading.jpg');">TRADING · IA</div>
+          <div class="body">
+            <h3>Plateforme d'aide à la décision pour traders</h3>
+            <p>Prédiction court terme, chandeliers, analyse de sentiment multi-sources. Infra GCP industrialisée.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">ASP.NET Core</span><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">Airflow</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span></div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="project" data-tags="ml bigdata cloud ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener" aria-label="Voir le projet Pond RL"></a>
+          <div class="thumb" style="--thumb: url('images/projets/pond-rl.jpg');">POND</div>
+          <div class="body">
+            <h3>Apprentissage par renforcement appliqué au jeu Pond</h3>
+            <p>Évaluer plusieurs approches DRL et leurs contextes d’usage.</p>
+            <div class="tags"><span class="tag">DRL</span><span class="tag">Python</span></div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="project" data-tags="ml bigdata cloud ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener" aria-label="Voir le projet Stream Processing Films"></a>
+          <div class="thumb" style="--thumb: url('images/projets/films-stream.jpg');">STATISTIQUE DE VUES DE FILMS EN<br/>TEMPS RÉEL</div>
+          <div class="body">
+            <h3>Stream processing avec Kafka</h3>
+            <p>Rendre utilisables des données multi-topics Kafka.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">Kafka</span></div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="project" data-tags="ml bigdata cloud ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener" aria-label="Voir le projet Classification Compositeur"></a>
+          <div class="thumb" style="--thumb: url('images/projets/databricks-ml.jpg');">CLASSIFICATION D'UN COMPOSITEUR</div>
+          <div class="body">
+            <h3>Cloud avancé pour le ML & Big Data</h3>
+            <p>Projet bout-en-bout sur Databricks.</p>
+            <div class="tags"><span class="tag">Databricks</span></div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="project" data-tags="ml bigdata cloud ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener" aria-label="Voir le projet NBA Analytics"></a>
+          <div class="thumb" style="--thumb: url('images/projets/nba.jpg');">NBA DATA ANALYTICS</div>
+          <div class="body">
+            <h3>Dashboard interactif</h3>
+            <p>Exploration, ES|QL, jobs ML, dashboard complet.</p>
+            <div class="tags"><span class="tag">Elasticsearch</span><span class="tag">Kibana</span><span class="tag">ES|QL</span><span class="tag">ML</span></div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="project" data-tags="ml bigdata cloud ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener" aria-label="Voir le projet Discord Trend"></a>
+          <div class="thumb" style="--thumb: url('images/projets/discord-trend.jpg');">TENDANCE DES MESSAGES</div>
+          <div class="body">
+            <h3>Analyse en temps réel de Discord</h3>
+            <p>Kafka + Spark Streaming + PySpark + HDFS.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Scala</span><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Spark Streaming</span><span class="tag">Hadoop HDFS</span></div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="project" data-tags="bigdata ia">
+          <a class="stretched" href="#" target="_blank" rel="noopener" aria-label="Voir le projet Bovie Track"></a>
+          <div class="thumb" style="--thumb: url('images/projets/bovie-track.jpg');">BOVIE TRACK</div>
+          <div class="body">
+            <h3>Bibliothèque personnelle de films et séries</h3>
+            <p>Suivi visionnage/lecture, statuts et sauvegarde.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span></div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="project" data-tags="web">
+          <a class="stretched" href="https://github.com/jobordeau/todo-list-php" target="_blank" rel="noopener" aria-label="Voir le projet VR Golf"></a>
+          <div class="thumb" style="--thumb: url('images/projets/vr-golf.jpg');">VR GOLF</div>
+          <div class="body">
+            <h3>Simuler une partie de mini-golf en 3D</h3>
+            <p>Physique réaliste, progression par niveaux.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">MonoGame</span><span class="tag">BEPUphysics</span></div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="project" data-tags="vr">
+          <a class="stretched" href="https://github.com/jobordeau/projet_rv_golf" target="_blank" rel="noopener" aria-label="Voir le projet Todo List PHP"></a>
+          <div class="thumb" style="--thumb: url('images/projets/todo-list.jpg');">TODO LIST</div>
+          <div class="body">
+            <h3>Application web de listes de tâches</h3>
+            <p>MVC, persistance MySQL, gestion des erreurs.</p>
+            <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span><span class="tag">HTML</span></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -340,34 +370,34 @@
         <h2>Études</h2>
       </div>
       <div class="timeline">
-          <div class="tl-line"></div>
-          <div class="card">
-              <h3>Mastère en informatique en Intelligence Artificielle & Big Data</h3>
-              <p class="muted">2022–2025 · Paris (75)</p>
-              <p>Titre RNCP niveau 7 : Expert en ingénierie de l'intelligence artificielle</p>
-              <div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Airflow</span><span class="chip">Terraform</span></div>
-          </div>
-          <div class="tl-line"></div>
-          <div class="card">
-              <h3> Bachelor Intelligence Artificielle et Big Data</h3>
-              <p class="muted">2022–2025 · Paris (75)</p>
-              <p>Titre RNCP niveau 6 : Chargé de développement de solutions applicatives ou logicielles</p>
-              <div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Airflow</span><span class="chip">Terraform</span></div>
-          </div>
-          <div class="tl-line"></div>
-          <div class="card">
-              <h3>DUT Informatique</h3>
-              <p class="muted">2019–2022 · Clermont-Ferrand (63)</p>
-              <p>Algorithmique, POO, web, bases de données. Bac S (2019) à  – option SI & spécialité ISN.</p>
-              <div class="chips"><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">POO</span></div>
-          </div>
-          <div class="tl-line"></div>
-          <div class="card">
-              <h3>Baccalauréat scientifique</h3>
-              <p class="muted">2019 · Nemours (77)</p>
-              <p>Option sciences de l’ingénieur & spécialité informatique et sciences du numérique.</p>
-              <div class="chips"><span class="chip">Python</span></div>
-          </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>Mastère en informatique en Intelligence Artificielle & Big Data</h3>
+          <p class="muted">2022–2025 · Paris (75)</p>
+          <p>Titre RNCP niveau 7 : Expert en ingénierie de l'intelligence artificielle</p>
+          <div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Airflow</span><span class="chip">Terraform</span></div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>Bachelor Intelligence Artificielle et Big Data</h3>
+          <p class="muted">2022–2025 · Paris (75)</p>
+          <p>Titre RNCP niveau 6 : Chargé de développement de solutions applicatives ou logicielles</p>
+          <div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Airflow</span><span class="chip">Terraform</span></div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>DUT Informatique</h3>
+          <p class="muted">2019–2022 · Clermont-Ferrand (63)</p>
+          <p>Algorithmique, POO, web, bases de données. Bac S (2019) – option SI & spécialité ISN.</p>
+          <div class="chips"><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">POO</span></div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="card">
+          <h3>Baccalauréat scientifique</h3>
+          <p class="muted">2019 · Nemours (77)</p>
+          <p>Option sciences de l’ingénieur & spécialité ISN.</p>
+          <div class="chips"><span class="chip">Python</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -527,5 +557,3 @@
   </script>
 </body>
 </html>
-
-
