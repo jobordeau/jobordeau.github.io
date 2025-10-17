@@ -421,6 +421,8 @@
         }
 
         .project .body {
+            position:relative;
+            z-index:1;
             padding: 14px
         }
 
@@ -455,7 +457,7 @@
           position:absolute;
           inset:0;
           display:block;
-          z-index:10;           
+          z-index:10;           /* sous l’étiquette */
           cursor:pointer;
         }
 
@@ -484,23 +486,29 @@
         
         /* Badge "Ouvrir ↗" au survol (style proche cert-badge) */
         .project::after{
-          content: "Ouvrir ↗";
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          padding: 6px 10px;
-          border: 1px solid var(--line);
-          background: var(--panel);
-          border-radius: 12px;
-          font-weight: 700;
-          color: var(--text);
+          content:"Ouvrir ↗";
+          position:absolute;
+          top:10px; right:10px;
+          padding:6px 10px;
+          border-radius:999px;
+          background:linear-gradient(135deg, var(--brand), var(--brand-2));
+          color:#0b0d12;
+          font-weight:800;
+          font-size:12px;
+          border:1px solid color-mix(in srgb, var(--line) 40%, transparent);
           box-shadow: var(--shadow);
-          opacity: 0;
-          transform: translateY(-4px);
-          transition: opacity .15s ease, transform .15s ease, border-color .15s ease;
-          pointer-events: none;
+          opacity:0;
+          transform:translateY(-6px);
+          transition:opacity .2s ease, transform .2s ease;
+          z-index:15;          /* AU-DESSUS du lien */
+          pointer-events:none; /* le clic passe au lien */
         }
-        .project:hover::after,
+        
+        .project:hover::after{
+          opacity:1;
+          transform:translateY(0);
+        }
+        
         .project:focus-within::after{
           opacity: 1;
           transform: translateY(0);
@@ -1031,6 +1039,7 @@
     </script>
 </body>
 </html>
+
 
 
 
