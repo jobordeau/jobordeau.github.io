@@ -451,14 +451,22 @@
             border-radius: 999px
         }
 
-        .project a.stretched {
-            position: absolute;
-            inset: 0
+        .project a.stretched{
+          position:absolute;
+          inset:0;
+          display:block;
+          z-index:10;           
+          cursor:pointer;
         }
 
         /* Effet "cliquable" sur les projets */
         .project{
           transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+        }
+        .project .thumb,
+        .project .body{
+          position:relative;
+          z-index:1;         
         }
         .project:hover,
         .project:focus-within{
@@ -1023,6 +1031,7 @@
     </script>
 </body>
 </html>
+
 
 
 
