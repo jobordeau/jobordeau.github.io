@@ -199,6 +199,39 @@
             text-align: center
         }
 
+        /* Badge de certification sous la photo */
+        .cert-badge{
+          display:inline-flex;
+          align-items:center;
+          gap:10px;
+          margin-top:10px;
+          padding:8px 12px;
+          border:1px solid var(--line);
+          background:var(--panel);
+          border-radius:12px;
+          font-weight:700;
+          color:var(--text);
+          box-shadow:var(--shadow);
+          text-align:left;
+          transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+        }
+        .cert-badge:hover{
+          transform:translateY(-1px);
+          border-color:color-mix(in srgb, var(--brand) 40%, var(--line));
+          box-shadow:0 14px 30px rgba(0,0,0,.38);
+        }
+        .cert-badge img{
+          width:28px; height:28px;
+          object-fit:contain;
+          border-radius:6px;
+          background:#fff;         
+          padding:2px;
+        }
+        .cert-badge span{
+          line-height:1.2;
+        }
+
+
         .title {
             font-size: clamp(32px, 4.6vw, 56px);
             line-height: 1.05;
@@ -490,6 +523,8 @@
                 grid-template-columns: 1fr
             }
         }
+
+        
     </style>
 </head>
 <body>
@@ -532,8 +567,14 @@
                     <img src="images/profile.jpg" alt="Photo de profil de Jovann Bordeau" loading="eager" />
                 </div>
                 <div class="avatar-badge">
-                    <span class="badge">Expert en ingénierie de l'intelligence artificielle</span>
-                    <p class="subtitle">24 ans — Bac+5 — Île-de-France</p>
+                  <span class="badge">Expert en ingénierie de l'intelligence artificielle</span>
+                  <a class="cert-badge"
+                     href="https://learn.microsoft.com/api/credentials/share/fr-fr/JovannBORDEAU-8072/E1EB41D43BE4B2BE?sharingId"
+                     target="_blank" rel="noopener">
+                    <img src="images/dp-700.png" alt="Badge DP-700 Microsoft Certified" />
+                    <span>DP-700 Microsoft Certified: Fabric Data Engineer Associate</span>
+                    <p class="subtitle">24 ans — Bac+5 — Île-de-France</p>  
+                  </a>
                 </div>
             </div>
 
@@ -931,6 +972,7 @@
     </script>
 </body>
 </html>
+
 
 
 
