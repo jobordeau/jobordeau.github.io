@@ -200,40 +200,50 @@
         }
 
         /* Badge de certification sous la photo */
-        .cert-badge{
-          display:inline-flex;
-          align-items:center;
-          gap:10px;
-          margin-top:10px;
-          padding:8px 12px;
-          border:1px solid var(--line);
-          background:var(--panel);
-          border-radius:12px;
-          font-weight:700;
-          color:var(--text);
-          box-shadow:var(--shadow);
-          text-align:left;
-          transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-        }
-        .cert-badge:hover{
-          transform:translateY(-1px);
-          border-color:color-mix(in srgb, var(--brand) 40%, var(--line));
-          box-shadow:0 14px 30px rgba(0,0,0,.38);
-        }
-        
-        .cert-badge img{
-          width:40px;              
-          height:40px;
-          object-fit:contain;
-          border-radius:6px;      
-          background:transparent;  
-          padding:0;               
-          box-shadow: 0 2px 8px rgba(0,0,0,.25); 
-        }
-        .cert-badge span{
-          line-height:1.2;
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            background: var(--panel);
+            border-radius: 12px;
+            font-weight: 700;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            text-align: left;
+            transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
         }
 
+            .cert-badge:hover {
+                transform: translateY(-1px);
+                border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
+                box-shadow: 0 14px 30px rgba(0,0,0,.38);
+            }
+
+            .cert-badge img {
+                width: 70px;
+                height: 70px;
+                object-fit: contain;
+                border-radius: 6px;
+                background: transparent;
+                padding: 0;
+                box-shadow: 0 2px 8px rgba(0,0,0,.25);
+            }
+
+            .cert-badge span {
+                line-height: 1.2;
+            }
+
+            .cert-badge .cert-text {
+                flex: 1; /* occupe toute la largeur restante */
+                display: flex; /* pour centrer dans sa “cellule” */
+                align-items: center; /* centre verticalement */
+                justify-content: center; /* centre horizontalement */
+                text-align: center;
+                line-height: 1.2;
+            }
 
         .title {
             font-size: clamp(32px, 4.6vw, 56px);
@@ -424,8 +434,8 @@
         }
 
         .project .body {
-            position:relative;
-            z-index:1;
+            position: relative;
+            z-index: 1;
             padding: 14px
         }
 
@@ -456,75 +466,83 @@
             border-radius: 999px
         }
 
-        .project a.stretched{
-          position:absolute;
-          inset:0;
-          display:block;
-          z-index:10;           /* sous l’étiquette */
-          cursor:pointer;
+        .project a.stretched {
+            position: absolute;
+            inset: 0;
+            display: block;
+            z-index: 10; /* sous l’étiquette */
+            cursor: pointer;
         }
 
         /* Effet "cliquable" sur les projets */
-        .project{
-          transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-        }
-        .project .thumb,
-        .project .body{
-          position:relative;
-          z-index:1;         
-        }
-        .project:hover,
-        .project:focus-within{
-          transform: translateY(-4px);
-          border-color: color-mix(in srgb, var(--brand) 35%, var(--line));
-          box-shadow: 0 18px 44px rgba(0,0,0,.45);
-        }
-        .project .thumb::after{
-          transition: opacity .18s ease;
-        }
-        .project:hover .thumb::after,
-        .project:focus-within .thumb::after{
-          opacity: .55; /* fonce un peu l’overlay */
-        }
-        
-        /* Badge "Ouvrir ↗" au survol (style proche cert-badge) */
-        .project::after{
-          content:"Ouvrir ↗";
-          position:absolute;
-          top:10px; right:10px;
-          padding:6px 10px;
-          border-radius:999px;
-          background:linear-gradient(135deg, var(--brand), var(--brand-2));
-          color:#0b0d12;
-          font-weight:800;
-          font-size:12px;
-          border:1px solid color-mix(in srgb, var(--line) 40%, transparent);
-          box-shadow: var(--shadow);
-          opacity:0;
-          transform:translateY(-6px);
-          transition:opacity .2s ease, transform .2s ease;
-          z-index:15;          /* AU-DESSUS du lien */
-          pointer-events:none; /* le clic passe au lien */
-        }
-        
-        .project:hover::after{
-          opacity:1;
-          transform:translateY(0);
-        }
-        
-        .project:focus-within::after{
-          opacity: 1;
-          transform: translateY(0);
-          border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
+        .project {
+            transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
         }
 
-        /* Curseur + focus clavier */
-        .project a.stretched{ cursor: pointer; }
-        .project a.stretched:focus-visible{
-          outline: 2px solid color-mix(in srgb, var(--brand) 55%, #fff);
-          outline-offset: 3px;
-          border-radius: 14px;
-        }
+            .project .thumb,
+            .project .body {
+                position: relative;
+                z-index: 1;
+            }
+
+            .project:hover,
+            .project:focus-within {
+                transform: translateY(-4px);
+                border-color: color-mix(in srgb, var(--brand) 35%, var(--line));
+                box-shadow: 0 18px 44px rgba(0,0,0,.45);
+            }
+
+            .project .thumb::after {
+                transition: opacity .18s ease;
+            }
+
+            .project:hover .thumb::after,
+            .project:focus-within .thumb::after {
+                opacity: .55; /* fonce un peu l’overlay */
+            }
+
+            /* Badge "Ouvrir ↗" au survol (style proche cert-badge) */
+            .project::after {
+                content: "Ouvrir ↗";
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 6px 10px;
+                border-radius: 999px;
+                background: linear-gradient(135deg, var(--brand), var(--brand-2));
+                color: #0b0d12;
+                font-weight: 800;
+                font-size: 12px;
+                border: 1px solid color-mix(in srgb, var(--line) 40%, transparent);
+                box-shadow: var(--shadow);
+                opacity: 0;
+                transform: translateY(-6px);
+                transition: opacity .2s ease, transform .2s ease;
+                z-index: 15; /* AU-DESSUS du lien */
+                pointer-events: none; /* le clic passe au lien */
+            }
+
+            .project:hover::after {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .project:focus-within::after {
+                opacity: 1;
+                transform: translateY(0);
+                border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
+            }
+
+            /* Curseur + focus clavier */
+            .project a.stretched {
+                cursor: pointer;
+            }
+
+                .project a.stretched:focus-visible {
+                    outline: 2px solid color-mix(in srgb, var(--brand) 55%, #fff);
+                    outline-offset: 3px;
+                    border-radius: 14px;
+                }
 
         /* Skills */
         .skills {
@@ -593,8 +611,6 @@
                 grid-template-columns: 1fr
             }
         }
-
-        
     </style>
 </head>
 <body>
@@ -637,14 +653,14 @@
                     <img src="images/profile.jpg" alt="Photo de profil de Jovann Bordeau" loading="eager" />
                 </div>
                 <div class="avatar-badge">
-                  <span class="badge">Expert en ingénierie de l'intelligence artificielle</span>
-                  <a class="cert-badge"
-                     href="https://learn.microsoft.com/api/credentials/share/fr-fr/JovannBORDEAU-8072/E1EB41D43BE4B2BE?sharingId"
-                     target="_blank" rel="noopener">
-                    <img src="images/dp-700.png" alt="Badge DP-700 Microsoft Certified" />
-                    <span>DP-700 Microsoft Certified: Fabric Data Engineer Associate</span>        
-                  </a>
-                  <p class="subtitle">24 ans — Bac+5 — Île-de-France</p>    
+                    <span class="badge">Expert en ingénierie de l'intelligence artificielle</span>
+                    <a class="cert-badge"
+                       href="https://learn.microsoft.com/api/credentials/share/fr-fr/JovannBORDEAU-8072/E1EB41D43BE4B2BE?sharingId"
+                       target="_blank" rel="noopener">
+                        <img src="images/dp-700.png" alt="Badge DP-700 Microsoft Certified" />
+                        <span class="cert-text">DP-700 Microsoft Certified: Fabric Data Engineer Associate</span>
+                    </a>
+                    <p class="subtitle">24 ans — Bac+5 — Île-de-France</p>
                 </div>
             </div>
 
@@ -885,7 +901,7 @@
                         <span class="chip">Java</span><span class="chip">Scala</span><span class="chip">Python</span>
                         <span class="chip">SQL</span><span class="chip">NoSQL</span><span class="chip">PL/SQL</span>
                         <span class="chip">Ruby</span><span class="chip">HTML5</span><span class="chip">CSS</span>
-                        <span class="chip">PHP7</span>
+                        <span class="chip">PHP7</span><span class="chip">KQL</span>
                     </div>
                 </div>
 
@@ -893,7 +909,7 @@
                 <div class="skill">
                     <strong>AI et Big Data</strong>
                     <div class="chips">
-                        <span class="chip">Machine Learning</span><span class="chip">Deep Learning</span>
+                        <span class="chip">Microsoft Fabric</span><span class="chip">Machine Learning</span><span class="chip">Deep Learning</span>
                         <span class="chip">Reinforcement Learning</span><span class="chip">NLP</span>
                         <span class="chip">Hadoop</span><span class="chip">Spark</span><span class="chip">Kafka</span>
                     </div>
@@ -1042,7 +1058,6 @@
     </script>
 </body>
 </html>
-
 
 
 
