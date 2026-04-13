@@ -15,7 +15,7 @@ const portfolioData = {
     phone: "+33 6 51 21 83 57",
     location: "Seine-et-Marne (77), France",
     github: "https://github.com/jobordeau",
-    linkedin: "https://www.linkedin.com/in/jovann-bordeau/",
+    linkedin: "https://www.linkedin.com/in/jovann-bordeau-8a526b207/",
     cv: "CV_Jovann_Bordeau.pdf",
     certification: "Microsoft Certified · DP-700 Fabric Data Engineer",
     tagline: "Je conçois des pipelines de données robustes et des architectures cloud-native qui transforment la donnée brute en valeur métier mesurable.",
@@ -55,7 +55,7 @@ const portfolioData = {
     {
       category: "Langages",
       kicker: "Code",
-      icon: "</>",
+      icon: "{ }",
       span: "third",
       tags: ["Python", "SQL", "T-SQL", "KQL", "Scala", "C# / .NET", "Java", "C++"],
     },
