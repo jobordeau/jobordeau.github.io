@@ -304,7 +304,7 @@ function renderHero() {
   const p = portfolioData.profile;
 
   document.getElementById("hero-title").innerHTML = `
-    <span class="outline">${p.name.split(" ")[0]}</span><br>
+    <span class="outline">Jovann BORDEAU</span><br>
     <span class="gradient">${p.title}.</span>
   `;
 
