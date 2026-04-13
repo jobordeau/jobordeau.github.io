@@ -13,7 +13,7 @@ const portfolioData = {
     title: "Data Engineer",
     email: "jbordeau2@myges.fr",
     phone: "+33 6 51 21 83 57",
-    location: "Seine-et-Marne (77), France",
+    location: "Paris & Île-de-France",
     github: "https://github.com/jobordeau",
     linkedin: "https://www.linkedin.com/in/jovann-bordeau-8a526b207/",
     cv: "CV_Jovann_Bordeau.pdf",
@@ -230,8 +230,8 @@ const portfolioData = {
   timeline: [
     {
       type: "exp",
-      period: "2022 — 2025",
-      title: "Data & AI Engineer — Alternance",
+      period: "2023 — 2025",
+      title: "Data Engineer — Alternance",
       org: "Visiodent · Clichy",
       description: "Développement sur le logiciel Veasy. Pilotage de migrations de données et conception d'une IA d'assistance personnalisée pour les utilisateurs finaux.",
       tags: ["C# / .NET", "Python", "Data Migration", "IA"],
@@ -255,15 +255,15 @@ const portfolioData = {
     {
       type: "edu",
       period: "2023 — 2025",
-      title: "Mastère Intelligence Artificielle et Big Data — RNCP 7",
-      org: "ESGI Paris",
+      title: "Mastère Informatique — RNCP 7",
+      org: "ESGI Paris · Spécialité IA & Big Data",
       description: "Formation avancée en architectures distribuées, Machine Learning, cloud et Data Engineering.",
       tags: ["Big Data", "IA", "Cloud"],
     },
     {
       type: "edu",
       period: "2022 — 2023",
-      title: "Bachelor Intelligence Artificielle et Big Data — RNCP 6",
+      title: "Bachelor IA & Big Data — RNCP 6",
       org: "ESGI Paris",
       description: "Socle technique en Data Science, traitements distribués et développement back-end.",
       tags: ["Python", "SQL", "Data"],
@@ -329,25 +329,26 @@ function renderHero() {
       <span class="cert-badge__code">DP-700 · Certified</span>
     </div>
   `;
+}
 
-  document.getElementById("hero-meta").innerHTML = `
-    <div class="hero__meta-item">
-      <span class="hero__meta-label">Expérience</span>
-      <span class="hero__meta-value">3 ans en alternance</span>
-    </div>
-    <div class="hero__meta-item">
-      <span class="hero__meta-label">Localisation</span>
-      <span class="hero__meta-value">${p.location}</span>
-    </div>
-    <div class="hero__meta-item">
-      <span class="hero__meta-label">Anglais</span>
-      <span class="hero__meta-value">${p.toeic}</span>
-    </div>
-    <div class="hero__meta-item">
-      <span class="hero__meta-label">Statut</span>
-      <span class="hero__meta-value">Ouvert aux opportunités</span>
-    </div>
-  `;
+/* --- Facts strip (under hero) --- */
+function renderFactsStrip() {
+  const p = portfolioData.profile;
+  const facts = [
+    { label: "Expérience",   value: "3 ans en alternance" },
+    { label: "Localisation", value: p.location },
+    { label: "Anglais",      value: p.toeic },
+    { label: "Disponibilité", value: "Ouvert aux opportunités" },
+  ];
+
+  document.getElementById("facts-strip").innerHTML = facts
+    .map(f => `
+      <div class="fact">
+        <span class="fact__label">${f.label}</span>
+        <span class="fact__value">${f.value}</span>
+      </div>
+    `)
+    .join("");
 }
 
 /* --- Skills Bento --- */
@@ -630,6 +631,7 @@ function initCanvas() {
 function init() {
   renderNav();
   renderHero();
+  renderFactsStrip();
   renderSkills();
   renderFilters();
   renderProjects();
