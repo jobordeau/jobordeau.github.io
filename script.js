@@ -303,8 +303,6 @@ function renderNav() {
 function renderHero() {
   const p = portfolioData.profile;
 
-  document.getElementById("hero-badge-text").textContent = p.certification;
-
   document.getElementById("hero-title").innerHTML = `
     <span class="outline">${p.name.split(" ")[0]}</span><br>
     <span class="gradient">${p.title}.</span>
@@ -319,6 +317,17 @@ function renderHero() {
     <a href="${p.cv}" target="_blank" rel="noopener" class="btn btn--ghost">
       Télécharger le CV
     </a>
+  `;
+
+  document.getElementById("cert-badge").innerHTML = `
+    <div class="cert-badge__img-wrap">
+      <img src="images/dp-700.png" alt="Microsoft DP-700 Certification" class="cert-badge__img" />
+    </div>
+    <div class="cert-badge__text">
+      <span class="cert-badge__kicker">Microsoft Certified</span>
+      <span class="cert-badge__title">Fabric Data Engineer Associate</span>
+      <span class="cert-badge__code">DP-700 · Certified</span>
+    </div>
   `;
 
   document.getElementById("hero-meta").innerHTML = `
