@@ -255,15 +255,15 @@ const portfolioData = {
     {
       type: "edu",
       period: "2023 — 2025",
-      title: "Mastère Informatique — RNCP 7",
-      org: "ESGI Paris · Spécialité IA & Big Data",
+      title: "Mastère Intelligence Artificielle et Big Data — RNCP 7",
+      org: "ESGI Paris",
       description: "Formation avancée en architectures distribuées, Machine Learning, cloud et Data Engineering.",
       tags: ["Big Data", "IA", "Cloud"],
     },
     {
       type: "edu",
       period: "2022 — 2023",
-      title: "Bachelor IA & Big Data — RNCP 6",
+      title: "Bachelor Intelligence Artificielle et Big Data — RNCP 6",
       org: "ESGI Paris",
       description: "Socle technique en Data Science, traitements distribués et développement back-end.",
       tags: ["Python", "SQL", "Data"],
