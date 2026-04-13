@@ -297,11 +297,11 @@ main, header, footer { position: relative; z-index: 1; }
   color: transparent;
 }
 .hero__title .outline {
-  background: linear-gradient(180deg, #FFFFFF 0%, #B8B8C9 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #F5F5FA;
   -webkit-text-stroke: 0;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
 }
 .hero__tagline {
   font-size: clamp(14px, 1.3vw, 17px);
