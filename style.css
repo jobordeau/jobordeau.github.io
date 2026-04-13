@@ -297,8 +297,11 @@ main, header, footer { position: relative; z-index: 1; }
   color: transparent;
 }
 .hero__title .outline {
+  background: linear-gradient(180deg, #FFFFFF 0%, #B8B8C9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--text-dim);
+  -webkit-text-stroke: 0;
 }
 .hero__tagline {
   font-size: clamp(14px, 1.3vw, 17px);
