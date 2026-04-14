@@ -342,9 +342,9 @@ function renderHero() {
   `;
 
   document.getElementById("rncp-badge").innerHTML = `
-    <span class="rncp-badge__kicker">Diplôme RNCP 7</span>
-    <span class="rncp-badge__title">Expert en ingénierie de l'IA</span>
-    <span class="rncp-badge__sub">ESGI Paris · Mastère</span>
+    <span class="rncp-badge__kicker">Diplôme · BAC+5</span>
+    <span class="rncp-badge__title">Expert en Ingénierie de l'Intelligence Artificielle</span>
+    <span class="rncp-badge__sub">ESGI Paris</span>
   `;
 }
 
