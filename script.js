@@ -231,7 +231,7 @@ const portfolioData = {
     {
       type: "exp",
       period: "2023 — 2025",
-      title: "Data et IA Engineer — Alternance",
+      title: "Data & IA Engineer — Alternance",
       org: "Visiodent · Clichy",
       description: "Développement sur le logiciel Veasy. Pilotage de migrations de données et conception d'une IA d'assistance personnalisée pour les utilisateurs finaux.",
       tags: ["C# / .NET", "Python", "Data Migration", "IA"],
