@@ -151,9 +151,10 @@ main, header, footer { position: relative; z-index: 1; }
   max-width: var(--max-width);
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, auto) minmax(280px, 380px);
   gap: clamp(32px, 5vw, 64px);
   align-items: center;
+  justify-content: space-between;
 }
 .hero__content { min-width: 0; }
 .hero__visual {
@@ -187,7 +188,7 @@ main, header, footer { position: relative; z-index: 1; }
 
 /* --- CERT BADGE (premium showcase for DP-700) --- */
 .cert-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 12px;
   padding: 10px 18px 10px 10px;
@@ -393,12 +394,12 @@ main, header, footer { position: relative; z-index: 1; }
 
 /* --- Credentials row (DP-700 + RNCP) --- */
 .credentials {
-  display: flex;
-  flex-wrap: nowrap;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   gap: 10px;
   align-items: stretch;
   width: max-content;
-  max-width: 100%;
 }
 
 /* RNCP companion badge */
