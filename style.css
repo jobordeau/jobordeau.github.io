@@ -401,6 +401,13 @@ main, header, footer { position: relative; z-index: 1; }
   align-items: stretch;
   width: max-content;
 }
+@media (max-width: 720px) {
+  .credentials {
+    flex-direction: column !important;
+    width: max-content;
+    max-width: 100%;
+  }
+}
 
 /* RNCP companion badge */
 .rncp-badge {
