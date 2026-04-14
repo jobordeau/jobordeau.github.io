@@ -21,7 +21,7 @@ const portfolioData = {
     cv: "CV_Jovann_Bordeau.pdf",
     certification: "Microsoft Certified · DP-700 Fabric Data Engineer",
     rncp: "RNCP 7 · Expert en ingénierie de l'IA",
-    featuredStack: ["Python", "SQL", "Spark", "Azure", "Databricks", "C#"],
+    featuredStack: ["Python", "SQL", "Spark", "Azure", "Fabric", "C#"],
     tagline: "Je conçois des pipelines de données robustes et des architectures cloud-native qui transforment la donnée brute en valeur métier mesurable.",
     toeic: "TOEIC 790",
   },
