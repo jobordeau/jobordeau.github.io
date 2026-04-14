@@ -14,10 +14,14 @@ const portfolioData = {
     email: "jbordeau2@myges.fr",
     phone: "+33 6 51 21 83 57",
     location: "Paris & Île-de-France",
+    nationality: "Française",
+    license: "Permis B",
     github: "https://github.com/jobordeau",
     linkedin: "https://www.linkedin.com/in/jovann-bordeau-8a526b207/",
     cv: "CV_Jovann_Bordeau.pdf",
     certification: "Microsoft Certified · DP-700 Fabric Data Engineer",
+    rncp: "RNCP 7 · Expert en ingénierie de l'IA",
+    featuredStack: ["Python", "SQL", "Spark", "Azure", "Databricks", "C#"],
     tagline: "Je conçois des pipelines de données robustes et des architectures cloud-native qui transforment la donnée brute en valeur métier mesurable.",
     toeic: "TOEIC 790",
   },
@@ -305,10 +309,17 @@ function renderHero() {
 
   document.getElementById("hero-title").innerHTML = `
     <span class="outline">Jovann BORDEAU</span><br>
-    <span class="gradient">${p.title}.</span>
+    <span class="gradient">${p.title}</span>
   `;
 
   document.getElementById("hero-tagline").textContent = p.tagline;
+
+  document.getElementById("hero-stack").innerHTML = `
+    <span class="hero-stack__label">Core stack</span>
+    <div class="hero-stack__chips">
+      ${p.featuredStack.map(t => `<span class="hero-stack__chip">${t}</span>`).join("")}
+    </div>
+  `;
 
   document.getElementById("hero-ctas").innerHTML = `
     <a href="#contact" class="btn btn--primary">
@@ -329,16 +340,24 @@ function renderHero() {
       <span class="cert-badge__code">DP-700 · Certified</span>
     </div>
   `;
+
+  document.getElementById("rncp-badge").innerHTML = `
+    <span class="rncp-badge__kicker">Diplôme RNCP 7</span>
+    <span class="rncp-badge__title">Expert en ingénierie de l'IA</span>
+    <span class="rncp-badge__sub">ESGI Paris · Mastère</span>
+  `;
 }
 
 /* --- Facts strip (under hero) --- */
 function renderFactsStrip() {
   const p = portfolioData.profile;
   const facts = [
-    { label: "Expérience",   value: "3 ans en alternance" },
-    { label: "Localisation", value: p.location },
-    { label: "Anglais",      value: p.toeic },
-    { label: "Disponibilité", value: "Ouvert aux opportunités" },
+    { label: "Expérience",    value: "3 ans en alternance" },
+    { label: "Localisation",  value: p.location },
+    { label: "Anglais",       value: p.toeic },
+    { label: "Permis",        value: p.license },
+    { label: "Nationalité",   value: p.nationality },
+    { label: "Disponibilité", value: "Ouvert" },
   ];
 
   document.getElementById("facts-strip").innerHTML = facts
