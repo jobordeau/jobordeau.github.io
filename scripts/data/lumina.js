@@ -4,16 +4,9 @@
 export const lumina = {
   title: "LUMINA",
   subtitle: "Architecture d'intégration cloud-native sur Azure",
-  kicker: "// projet phare · 2026",
+  kicker: "// projet",
   description:
     "Plateforme E-Commerce serverless event-driven déployée intégralement par Terraform sur Microsoft Azure. Une commande HTTP traverse APIM, est validée puis publiée sur un Topic Service Bus, traitée par une Function .NET 8, persistée dans un Data Lake Gen2, convertie en Parquet par Data Factory, puis exposée à Microsoft Fabric en Zero-Copy via Shortcut. Le pattern DLQ avec Event Grid → Logic Apps garantit la résilience et l'observabilité bout-en-bout.",
-
-  stats: [
-    { value: "14", label: "Composants Azure" },
-    { value: "6",  label: "Functions .NET" },
-    { value: "0",  label: "Secret en clair" },
-    { value: "3×", label: "Retries + DLQ" },
-  ],
 
   highlights: [
     "Event-driven · APIM + Service Bus + Event Grid",
@@ -43,8 +36,8 @@ export const lumina = {
   screens: [
     {
       src: "public/images/projects/lumina-architecture.png",
-      alt: "Diagramme architecture Lumina — 3 swimlanes Ingestion / Données / Résilience",
-      caption: "Architecture · 3 flux séparés visualisés en swimlanes",
+      alt: "Diagramme architecture Lumina — vue d'ensemble en 3 couloirs",
+      caption: "Architecture · 3 flux séparés et leurs ressources Azure",
     },
     {
       src: "public/images/projects/lumina-demo.png",

@@ -62,20 +62,6 @@ export const projects = [
     link: "https://github.com/Saytk/DeeplearningPond",
     linkType: "repo",
   },
-  {
-    id: "mobile-market",
-    title: "Mobile Market Analysis",
-    subtitle: "Profils d'apps rentables",
-    context: "Autodidacte",
-    size: "small",
-    categories: ["notebook", "ml"],
-    description:
-      "Analyse exploratoire des stores App Store et Google Play. Identification data-driven des profils d'applications mobiles à fort potentiel de rentabilité.",
-    tags: ["Python", "Jupyter", "Data Analysis"],
-    image: "public/images/projects/notebook.png",
-    link: "https://github.com/jobordeau/mobile-app-market-analysis",
-    linkType: "repo",
-  },
 ];
 
 export const projectFilters = [
@@ -85,5 +71,4 @@ export const projectFilters = [
   { id: "ml",        label: "Machine Learning" },
   { id: "streaming", label: "Streaming" },
   { id: "devops",    label: "DevOps" },
-  { id: "notebook",  label: "Notebook" },
 ];

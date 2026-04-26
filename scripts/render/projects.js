@@ -32,7 +32,6 @@ export function renderProjects() {
           <div class="project-card__body">
             <div class="project-card__head">
               <span class="project-card__context">${p.context}</span>
-              <span class="project-card__num">/${String(i + 1).padStart(2, "0")}</span>
             </div>
             <h3 class="project-card__title">${p.title}</h3>
             <p class="project-card__subtitle">${p.subtitle}</p>

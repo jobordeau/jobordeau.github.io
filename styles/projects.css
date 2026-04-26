@@ -1,3 +1,33 @@
+/* ---------- PROJECTS BLOCK (sub-header for the grid) ---------- */
+.projects-block {
+  position: relative;
+  padding: clamp(48px, 6vw, 72px) 0 clamp(8px, 2vw, 16px);
+  margin-top: clamp(40px, 5vw, 60px);
+  border-top: 1px solid var(--border);
+}
+
+.projects-block__head {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.projects-block__kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-mute);
+}
+
+.projects-block__title {
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
 /* ---------- PROJECTS FILTERS ---------- */
 .projects-filters {
   display: flex;

@@ -21,9 +21,8 @@ export const profile = {
 };
 
 export const nav = [
-  { label: "Lumina",   href: "#lumina" },
-  { label: "Stack",    href: "#skills" },
   { label: "Projets",  href: "#projects" },
+  { label: "Stack",    href: "#skills" },
   { label: "Parcours", href: "#experience" },
   { label: "Contact",  href: "#contact" },
 ];

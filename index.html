@@ -68,30 +68,50 @@
     <div class="facts-strip__inner" id="facts-strip"></div>
   </section>
 
-  <!-- LUMINA FEATURED PROJECT -->
-  <section id="lumina" class="lumina" aria-labelledby="lumina-title">
-    <div id="lumina-section"></div>
+  <!-- PROJECTS (contains: Lumina featured + Projects grid + Early projects) -->
+  <section id="projects" class="section section--projects">
+    <div class="section__head">
+      <span class="section__index">01</span>
+      <h2 class="section__title">Projets</h2>
+      <p class="section__sub">Architectures, pipelines et preuves de concept — du projet phare aux premiers travaux.</p>
+    </div>
+
+    <!-- Lumina featured -->
+    <div class="lumina">
+      <div id="lumina-section"></div>
+    </div>
+
+    <!-- Other projects -->
+    <div class="projects-block">
+      <div class="projects-block__head reveal">
+        <span class="projects-block__kicker">// autres projets</span>
+        <h3 class="projects-block__title">Sélection de projets récents</h3>
+      </div>
+      <div class="projects-filters" id="projects-filters"></div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+
+    <!-- Early projects (DUT + first explorations) -->
+    <div class="early-projects">
+      <div class="early-projects__head reveal">
+        <span class="early-projects__kicker">// premiers projets</span>
+        <h3 class="early-projects__title">Mes premiers projets</h3>
+        <p class="early-projects__sub">
+          Travaux fondateurs en C#, en physique 3D, en architecture MVC et en analyse de données — premiers pas dans le développement et l'exploration data.
+        </p>
+      </div>
+      <div class="early-projects__grid" id="early-projects-grid"></div>
+    </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="section">
     <div class="section__head">
-      <span class="section__index">01</span>
+      <span class="section__index">02</span>
       <h2 class="section__title">Stack technique</h2>
       <p class="section__sub">Un arsenal maîtrisé du code au cloud — de l'ingestion à la mise en production.</p>
     </div>
     <div class="skills-bento" id="skills-bento"></div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="section__head">
-      <span class="section__index">02</span>
-      <h2 class="section__title">Projets</h2>
-      <p class="section__sub">Sélection d'architectures, pipelines et preuves de concept.</p>
-    </div>
-    <div class="projects-filters" id="projects-filters"></div>
-    <div class="projects-grid" id="projects-grid"></div>
   </section>
 
   <!-- EXPERIENCE + EDUCATION -->
@@ -117,20 +137,6 @@
         <div class="timeline" id="timeline-edu"></div>
       </div>
     </div>
-  </section>
-
-  <!-- EARLY PROJECTS (DUT) -->
-  <section id="early-projects" class="early-projects" aria-labelledby="early-title">
-    <div class="early-projects__head reveal">
-      <span class="early-projects__kicker">// premiers pas · 2019—2022</span>
-      <h2 id="early-title" class="early-projects__title">
-        Avant le Master, <em>le DUT.</em>
-      </h2>
-      <p class="early-projects__sub">
-        Quelques projets fondateurs qui m'ont mis le pied à l'étrier en C#, en physique 3D, et en architecture MVC.
-      </p>
-    </div>
-    <div class="early-projects__grid" id="early-projects-grid"></div>
   </section>
 
 </main>
