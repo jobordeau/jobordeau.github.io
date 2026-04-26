@@ -10,14 +10,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
 
-<!-- Canvas arrière-plan : flux de données animé -->
+<!-- Background canvas: animated data flow network -->
 <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <header class="nav">
   <a href="#hero" class="nav__logo">
     <span class="nav__logo-mark">JB</span>
@@ -51,7 +51,7 @@
         <div class="hero__photo-wrap">
           <div class="hero__photo-glow"></div>
           <div class="hero__photo-frame">
-            <img src="images/profile.jpg" alt="Jovann Bordeau" class="hero__photo" />
+            <img src="public/images/profile.jpg" alt="Jovann Bordeau" class="hero__photo" />
           </div>
           <div class="hero__photo-ring"></div>
         </div>
@@ -66,6 +66,11 @@
   <!-- FACTS STRIP -->
   <section class="facts-strip" aria-label="Informations clés">
     <div class="facts-strip__inner" id="facts-strip"></div>
+  </section>
+
+  <!-- LUMINA FEATURED PROJECT -->
+  <section id="lumina" class="lumina" aria-labelledby="lumina-title">
+    <div id="lumina-section"></div>
   </section>
 
   <!-- SKILLS -->
@@ -114,6 +119,20 @@
     </div>
   </section>
 
+  <!-- EARLY PROJECTS (DUT) -->
+  <section id="early-projects" class="early-projects" aria-labelledby="early-title">
+    <div class="early-projects__head reveal">
+      <span class="early-projects__kicker">// premiers pas · 2019—2022</span>
+      <h2 id="early-title" class="early-projects__title">
+        Avant le Master, <em>le DUT.</em>
+      </h2>
+      <p class="early-projects__sub">
+        Quelques projets fondateurs qui m'ont mis le pied à l'étrier en C#, en physique 3D, et en architecture MVC.
+      </p>
+    </div>
+    <div class="early-projects__grid" id="early-projects-grid"></div>
+  </section>
+
 </main>
 
 <!-- CONTACT / FOOTER -->
@@ -130,6 +149,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script type="module" src="scripts/main.js"></script>
 </body>
 </html>

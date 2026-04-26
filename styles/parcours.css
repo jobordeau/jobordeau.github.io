@@ -1,0 +1,104 @@
+/* ---------- PARCOURS SPLIT ---------- */
+.parcours-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(30px, 5vw, 64px);
+}
+.parcours-col {
+  min-width: 0;
+}
+.parcours-col__head {
+  margin-bottom: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.parcours-col__kicker {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--violet);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.parcours-col__kicker[data-type="edu"] { color: var(--emerald); }
+.parcours-col__title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px; bottom: 8px; left: 6px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--border-hi) 10%, var(--border-hi) 90%, transparent);
+}
+.tl-item {
+  position: relative;
+  padding: 0 0 40px 28px;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -28px; top: 6px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--violet);
+  box-shadow: 0 0 0 4px rgba(124,92,255,0.08);
+}
+.tl-item[data-type="edu"]::before {
+  border-color: var(--emerald);
+  box-shadow: 0 0 0 4px rgba(0,224,164,0.08);
+}
+.tl-item__period {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-mute);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.tl-item__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+.tl-item__org {
+  font-size: 13px;
+  color: var(--emerald);
+  font-family: var(--mono);
+  margin-bottom: 12px;
+}
+.tl-item[data-type="exp"] .tl-item__org { color: var(--violet); }
+.tl-item__desc {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+.tl-item__tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.tl-item__tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  padding: 3px 9px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 860px) {
+  .parcours-split { grid-template-columns: 1fr; gap: 60px; }
+}

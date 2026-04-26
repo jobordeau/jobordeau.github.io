@@ -1,0 +1,19 @@
+/* ============================================
+   JOVANN BORDEAU — PORTFOLIO
+   Main CSS · imports all modular stylesheets
+   ============================================ */
+
+/* 1. Foundations: reset, design tokens, background */
+@import "./base.css";
+
+/* 2. Reusable components: nav, reveal-on-scroll */
+@import "./components.css";
+
+/* 3. Section-specific styles in DOM order */
+@import "./hero.css";
+@import "./lumina.css";
+@import "./skills.css";
+@import "./projects.css";
+@import "./parcours.css";
+@import "./early-projects.css";
+@import "./footer.css";
