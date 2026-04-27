@@ -17,7 +17,7 @@ export const projects = [
       "Web-app industrialisée sur GCP orchestrant prédictions ML court-terme, détection de patterns de chandeliers et analyse de sentiment multi-sources. Stack Terraform / Airflow / Kubernetes déployant API, backtesting et signaux en production.",
     tags: ["Python", "ASP.NET Core", "GCP", "Terraform", "Airflow", "Kubernetes", "CI/CD", "ML", "NLP"],
     image: "public/images/projects/trading.jpg",
-    link: "https://github.com/Saytk/PA_2025_UPGRADED",
+    link: "https://github.com/jobordeau/PA_Quantia",
     linkType: "repo",
   },
   {
