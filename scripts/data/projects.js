@@ -21,6 +21,20 @@ export const projects = [
     linkType: "repo",
   },
   {
+    id: "pond",
+    title: "POND",
+    subtitle: "Deep Reinforcement Learning",
+    context: "Master",
+    size: "medium",
+    categories: ["ml"],
+    description:
+      "Benchmark d'agents DRL appliqué au jeu Pond. Étude comparative de plusieurs approches d'apprentissage par renforcement et de leurs régimes d'efficacité.",
+    tags: ["Python", "DRL", "IA"],
+    image: "public/images/projects/pond-rl.jpg",
+    link: "https://github.com/jobordeau/DeeplearningPond",
+    linkType: "repo",
+  },
+  {
     id: "discord-stream",
     title: "Analyse Discord Temps Réel",
     subtitle: "Stream Processing PySpark",
@@ -46,20 +60,6 @@ export const projects = [
     tags: ["Java", "Kafka", "Streaming", "BI"],
     image: "public/images/projects/films-stream.jpg",
     link: "https://github.com/jobordeau/StatFilmKafka",
-    linkType: "repo",
-  },
-  {
-    id: "pond",
-    title: "POND",
-    subtitle: "Deep Reinforcement Learning",
-    context: "Master",
-    size: "medium",
-    categories: ["ml"],
-    description:
-      "Benchmark d'agents DRL appliqué au jeu Pond. Étude comparative de plusieurs approches d'apprentissage par renforcement et de leurs régimes d'efficacité.",
-    tags: ["Python", "DRL", "IA"],
-    image: "public/images/projects/pond-rl.jpg",
-    link: "https://github.com/jobordeau/DeeplearningPond",
     linkType: "repo",
   },
 ];
