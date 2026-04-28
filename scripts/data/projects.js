@@ -59,7 +59,7 @@ export const projects = [
       "Benchmark d'agents DRL appliqué au jeu Pond. Étude comparative de plusieurs approches d'apprentissage par renforcement et de leurs régimes d'efficacité.",
     tags: ["Python", "DRL", "IA"],
     image: "public/images/projects/pond-rl.jpg",
-    link: "https://github.com/Saytk/DeeplearningPond",
+    link: "https://github.com/jobordeau/DeeplearningPond",
     linkType: "repo",
   },
 ];
