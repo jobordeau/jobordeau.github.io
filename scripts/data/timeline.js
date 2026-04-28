@@ -4,7 +4,7 @@
 export const timeline = [
   {
     type: "exp",
-    period: "2023 — 2025",
+    period: "2022 — 2025",
     title: "Data & IA Engineer — Alternance",
     org: "Visiodent · Clichy",
     description:
