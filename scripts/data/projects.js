@@ -59,7 +59,7 @@ export const projects = [
       "Pipeline de stream processing exploitant plusieurs topics Kafka en simultané. Transformation temps réel de flux hétérogènes en métriques BI exploitables.",
     tags: ["Java", "Kafka", "Streaming", "BI"],
     image: "public/images/projects/films-stream.jpg",
-    link: "https://github.com/jobordeau/StatFilmKafka",
+    link: "https://github.com/jobordeau/StatsFilmKafka",
     linkType: "repo",
   },
 ];
