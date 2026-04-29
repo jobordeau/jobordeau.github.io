@@ -45,7 +45,7 @@ export const projects = [
       "Architecture Spark Streaming sur HDFS. Lecture de flux, création de vues temporaires et requêtes distribuées PySpark/Scala pour extraire les tendances Discord en temps réel.",
     tags: ["Python", "Scala", "PySpark", "Kafka", "Spark Streaming", "HDFS"],
     image: "public/images/projects/discord-trend.jpg",
-    link: "https://github.com/jobordeau/SparkStreamingProject",
+    link: "https://github.com/jobordeau/spark-streaming-discord-analytics",
     linkType: "repo",
   },
   {
